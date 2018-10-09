@@ -32,7 +32,7 @@ include("navBar/navbar.html");
 
 <!-- carousel -->
 <div class="row justify-content-md-center">
-    <div class="col col-lg-auto" id=contenedorSlide>
+    <div class="col col-lg-12" id=contenedorSlide>
       <!-- corusel -->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
