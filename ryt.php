@@ -42,6 +42,7 @@ include("navBar/navbar.html");
             <div class="card" style="width:100%; height:100%;">
                 <div class="card-body">
                     <h5 class="card-title">Grupo de investigación y extensión GIV2LAB</h5>
+                    <h5 class="card-title">Grupo de investigación y extensión GIV2LA aksdjh smjdhasjdh sdm asmdbamdbB</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
             </div>
