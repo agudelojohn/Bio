@@ -1,0 +1,23 @@
+
+  footer{
+    background-color: #20AE29;
+    color:white;
+  }
+  footer a{
+    font-style: none;
+    color:white;
+  }
+  footer a:hover{
+    color: #682DCA;
+  }
+
+    .navbar{
+        background-color:#20AE29;
+        
+    }
+    .navbar a{
+        color:white;
+    }
+    .navbar a:hover{
+        color:#682DCA;
+    }
