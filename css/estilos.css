@@ -1,5 +1,22 @@
 /* Estilos para el index */
-
+.row{
+    margin-bottom:20px;
+}
+.jumbotron{
+    height:100%;
+    padding-bottom:0;
+}
+.display-news{
+    font-size:30px;
+}
+.btn-news{
+    width:auto;
+    height:100%;
+    margin-right:10px;
+}
+.col-btn{
+        height:115px;
+}
 #logo-descripcion{
     margin-top:20px;
     padding: 5px;

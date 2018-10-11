@@ -39,8 +39,8 @@ include("navBar/navbar.html");
         <!-- descrip -->
             <div class="card" style="width:100%; height:100%;">
                 <div class="card-body">
-                    <h5 class="card-title">Grupo de investigación y extensión GIV2LA aksdjh smjdhasjdh sdm asmdbamdbB</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 class="card-title">Biomedical Imaging, Vision and Learning Laboratory</h5>
+                    <p class="card-text">BivL2ab is mainly dedicated to solve problems related with visual information, covering from the acquisition and analysis of medical images to the understanding of complex spatio-temporal patterns in the general context of computer vision.  Such problems are tipically highly variant and challenging, being hence, the proposal of learning strategies fundamental to stand out significant behaviors from observed data, and to model prior expert knowledge in robust representations.</p>
                 </div>
             </div>
         </div>

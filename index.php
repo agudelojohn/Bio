@@ -29,8 +29,8 @@ include("navBar/navbar.html");
         <!-- descrip -->
             <div class="card" style="width:100%; height:100%;">
                 <div class="card-body">
-                    <h5 class="card-title">Grupo de investigación y extensión GIV2LAB</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <h5 class="card-title">Biomedical Imaging, Vision and Learning Laboratory</h5>
+                    <p class="card-text">BivL2ab is mainly dedicated to solve problems related with visual information, covering from the acquisition and analysis of medical images to the understanding of complex spatio-temporal patterns in the general context of computer vision.  Such problems are tipically highly variant and challenging, being hence, the proposal of learning strategies fundamental to stand out significant behaviors from observed data, and to model prior expert knowledge in robust representations.</p>
                 </div>
             </div>
         </div>
@@ -39,12 +39,55 @@ include("navBar/navbar.html");
 
 
 <!-- News -->
-<div class="row justify-content-md-center">
-    <div class="col col-lg-11" style="border:2px solid red;height:1000px;">
-    
-    jumbotron
+<style>
+.row{
+    margin-bottom:20px;
+}
+.jumbotron{
+    height:100%;
+    padding-bottom:0;
+}
+.display-news{
+    font-size:30px;
+}
+.btn-news{
+    width:auto;
+    height:100%;
+    margin-right:10px;
+}
+.col-btn{
+        height:115px;
+}
+</style>
+<div class="row justify-content-md-center" style="margin-top:20px;">
+    <div class="col col-lg-5" >
+        <div class="jumbotron jumbotron-fluid" id=jum-1>
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-10" >
+                    <h1 class="display-4 display-news">Presence in the CCC: Colombian Conference on Computing</h1>
+                    <p class="lead">Wilson and Jefferson</p>
+                </div>
+                <div class="col col-lg-1 col-btn" >
+                    <button type="button" class="btn btn-primary btn-lg btn-block btn-news"><strong> > </strong></button>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="col col-lg-5" >
+        <div class="jumbotron jumbotron-fluid" id=jum-1>
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-10" >
+                    <h1 class="display-4 display-news">Presence in poland</h1>
+                    <p class="lead">Jefferson was there</p>
+                </div>
+                <div class="col col-lg-1 col-btn" >
+                    <button type="button" class="btn btn-primary btn-lg btn-block btn-news"><strong> > </strong></button>
+                </div> 
+            </div>
+        </div>
     </div>
 </div>
+
 
 
 <!-- footer -->
