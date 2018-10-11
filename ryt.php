@@ -46,15 +46,15 @@ include("navBar/navbar.html");
         </div>
     </div>
 </div>
-
 <!-- lines of research -->
-<div class="container" style="margin-top:20px;">
-<ul class="list-group" id=lista-de-lineas>
-  <li class="list-group-item">Imaging and Inverse Problems</li>
-  <li class="list-group-item">Motion Understanding</li>
-  <li class="list-group-item">Learning and Image representation</li>
-</ul>
-</div>
+<div class="row justify-content-md-center ">
+    <div class="col col-lg-10" style="margin-top:20px;">
+        <ul class="list-group" id=lista-de-lineas>
+            <li class="list-group-item">Imaging and Inverse Problems</li>
+            <li class="list-group-item">Motion Understanding</li>
+            <li class="list-group-item">Learning and Image representation</li>
+        </ul>
+    </div>
 </div>
 
 

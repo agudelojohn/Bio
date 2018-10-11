@@ -11,15 +11,17 @@
 /* hasta aquí el index */
 
 /* estilos publications */
+.pre-publications{
+padding: 0;
+}
+li .card{
+    width: 100%;
+}
+#lista-de-publicaciones li{
+    margin-top:20px;
+}
 
-.carousel-item{
-    max-height:700px;
-    min-height:600px;
-    overflow:hidden;
-}
-.carousel-item img{
-    width:100% !important;
-}
+
 /* hasta aquí publications */
 
 /* estilos para RyT */
@@ -28,3 +30,27 @@
     padding:10px;
 }
 /* hasta aquí RyT */
+
+/* estilos para people */
+.carousel-item{
+    max-height:700px;
+    min-height:600px;
+    overflow:hidden;
+}
+.carousel-item img{
+    width:100% !important;
+}
+
+.name_profile, .p-c-d, .d-info{
+    width:100%;
+    border-bottom:1px solid grey;
+    height:auto;
+}
+.img-profile{
+    width:100%;
+    margin-top: 10%;
+}
+.d-info #titles{
+    padding-left: 0;
+}
+/* hasta aqui people */

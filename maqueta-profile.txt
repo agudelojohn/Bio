@@ -1,0 +1,42 @@
+<div class=container>
+    <div class="row justify-content-md-center ">
+        <div class="col col-lg-2">
+        <!-- aqui va la imagen -->
+            <img class="img-profile " src=" " alt="">
+        </div>
+        <div class="col col-lg-9">
+        <!-- ahora 3 divisiones para la información -->
+            <div class="row name_profile">
+                <!-- Nombre -->
+                <strong><h3> </h3></strong>
+            </div>
+            <div class="row p-c-d">
+                <!-- profesion, cargo, departamento -->
+               
+            </div>
+            <div class="row d-info">
+                <!-- demás informacion -->
+                <div class="col col-lg-auto text-left" style="padding-left:0;">
+                    <ul style=" list-style-type: none;" id="titles">
+                    <strong>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </strong>
+                    </ul>
+                </div>
+                <div class="col col-lg-auto">
+                    <ul style=" list-style-type: none; margin-left:-40px;">
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                        <li> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

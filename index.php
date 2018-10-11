@@ -42,7 +42,7 @@ include("navBar/navbar.html");
 <div class="row justify-content-md-center">
     <div class="col col-lg-11" style="border:2px solid red;height:1000px;">
     
-
+    jumbotron
     </div>
 </div>
 

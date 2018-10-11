@@ -18,47 +18,122 @@
 <?php
 include("navBar/navbar.html");
 ?>    
-
-
-<!-- carousel -->
-<div class="row justify-content-md-center">
-    <div class="col col-lg-12" id=contenedorSlide>
-      <!-- corusel -->
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="imgs/Internas/grupo1.png" alt="Imagen del grupo 1">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="imgs/Internas/grupo2.png" alt="Imagen del grupo 2">
-              </div>
+<div class="container">
+    <ul id=lista-de-publicaciones>
+        <li style="margin-top:30px;">
+            <div class="card border-left-0" >
+                <div class="card-body row pre-publications" >
+                    <div class="col col-lg-10">
+                        <h5 class="card-title">Frame-Level Covariance Descriptor for Action Recognition </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">W Moreno, G Garzón, F Martínez</h6>
+                        <p class="card-text">Colombian Conference on Computing, 276-290</p>
+                    </div>
+                    <div class="col col-lg-2">
+                        <h5>2018</h5>
+                        <br>
+                        <a href="#" class="card-link">Card link</a>
+                    </div>
+                </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-</div>
-<!-- until here -->
-
-<div class="row justify-content-md-center" style="margin-top:20px;"> <!-- row to keep know where are you -->
-            <div class="col col-lg-11" > 
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item active" aria-current="page"><a href="ryt.php">Publications</a></li>
-                    </ol>
-                </nav>
+        </li>
+        <li>
+            <div class="card border-left-0" >
+                <div class="card-body row pre-publications" >
+                    <div class="col col-lg-10">
+                        <!-- datos -->
+                        <h5 class="card-title">Towards On-Line Sign Language Recognition Using Cumulative SD-VLAD Descriptors </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">J Rodríguez, F Martínez</h6>
+                        <p class="card-text">Colombian Conference on Computing, 371-385</p>
+                       
+                    </div>
+                    <div class="col col-lg-2">
+                        <!-- fecha -->
+                        <h5>2018</h5>
+                        <br>
+                        <a href="#" class="card-link">Card link</a>
+                    </div>
+                </div>
             </div>
+        </li>
+        <li >
+            <div class="card border-left-0" >
+                <div class="card-body row pre-publications" >
+                    <div class="col col-lg-10">
+                        <!-- datos -->
+                        <h5 class="card-title">A Kinematic Gesture Representation Based on Shape Difference VLAD for Sign Language Recognition </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">J Rodríguez, F Martínez</h6>
+                        <p class="card-text">International Conference on Computer Vision and Graphics, 438-449</p>
+                       
+                    </div>
+                    <div class="col col-lg-2">
+                        <!-- fecha -->
+                        <h5>2018</h5>
+                        <br>
+                        <a href="#" class="card-link">Card link</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li >
+            <div class="card border-left-0" >
+                <div class="card-body row pre-publications" >
+                    <div class="col col-lg-10">
+                        <!-- datos -->
+                        <h5 class="card-title">Cardiac disease prediction from spatio-temporal motion patterns in cine-MRI  </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">E Sarmiento, J Pico, F Martinez</h6>
+                        <p class="card-text">Biomedical Imaging (ISBI 2018), 2018 IEEE 15th International Symposium on …</p>
+                       
+                    </div>
+                    <div class="col col-lg-2">
+                        <!-- fecha -->
+                        <h5>2018</h5>
+                        <br>
+                        <a href="#" class="card-link">Card link</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li >
+            <div class="card border-left-0" >
+                <div class="card-body row pre-publications" >
+                    <div class="col col-lg-10">
+                        <!-- datos -->
+                        <h5 class="card-title">Spatio-temporal multi-scale motion descriptor from a spatially-constrained decomposition for online action recognition  </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">F Martínez, A Manzanera, E Romero</h6>
+                        <p class="card-text">IET Computer Vision 11 (7), 541-549</p>
+                       
+                    </div>
+                    <div class="col col-lg-2">
+                        <!-- fecha -->
+                        <h5>2017</h5>
+                        <br>
+                        <a href="#" class="card-link">Card link</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li >
+            <div class="card border-left-0" >
+                <div class="card-body row pre-publications" >
+                    <div class="col col-lg-10">
+                        <!-- datos -->
+                        <h5 class="card-title">A multiresolution prostate representation for automatic segmentation in magnetic resonance images  </h5>
+                        <h6 class="card-subtitle mb-2 text-muted">C Alvarez, F Martínez, E Romero</h6>
+                        <p class="card-text">Medical physics 44 (4), 1312-1323</p>
+                       
+                    </div>
+                    <div class="col col-lg-2">
+                        <!-- fecha -->
+                        <h5></h5>
+                        <br>
+                        <a href="#" class="card-link">Card link</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
 </div>
+
 
 
 
@@ -66,10 +141,5 @@ include("navBar/navbar.html");
 include("navBar/footer.html");
 ?>    
 </div>
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>
