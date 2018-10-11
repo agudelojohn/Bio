@@ -65,38 +65,107 @@ include("navBar/navbar.html");
     <div class="row justify-content-md-center ">
         <div class="col col-lg-2">
         <!-- aqui va la imagen -->
-            <img class="img-profile " src="imgs/Profiles/p1.jpeg" alt="">
+            <img class="img-profile " src="imgs/Profiles/gustavo.jpg" alt="">
         </div>
         <div class="col col-lg-9">
         <!-- ahora 3 divisiones para la información -->
             <div class="row name_profile">
                 <!-- Nombre -->
-                <strong><h3>Fei-Fei Li, Ph.D.</h3></strong>
+                <strong><h3>Gustavo Garzón</h3></strong>
             </div>
             <div class="row p-c-d">
-                <!-- profesion, cargo, departamento -->
-                Professor <br>Director, Stanford AI Lab<br>Computer Science Departmen
+                <!-- profesion, cargo, departamento o estudios-->
+                Ms(c) Systems Engineering <br>B.Sc, Systems Engineering<br>Tech. Web Development
             </div>
             <div class="row d-info">
                 <!-- demás informacion -->
                 <div class="col col-lg-auto text-left" style="padding-left:0;">
                     <ul style=" list-style-type: none;" id="titles">
                     <strong>
-                        <li>Office</li>
-                        <li>Phone</li>
                         <li>Email</li>
-                        <li>Twitter</li>
-                        <li>Address</li>
+                        <li>Email</li>
                     </strong>
                     </ul>
                 </div>
                 <div class="col col-lg-auto">
                     <ul style=" list-style-type: none; margin-left:-40px;">
-                        <li>Room 246 Gates Bldg</li>
-                        <li>(650) 725-3860</li>
-                        <li>feifeili [at] cs [dot] stanford [dot] edu</li>
-                        <li>@drfeifei</li>
-                        <li>353 Serra Mall, Gates Building, Stanford, CA, 94305-9020</li>
+                        <li>gustavo.garzon@saber.uis.edu.co</li>
+                        <li>gustavogarzonuis@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class=container>
+    <div class="row justify-content-md-center ">
+        <div class="col col-lg-2">
+        <!-- aqui va la imagen -->
+            <img class="img-profile " src="imgs/Profiles/jefferson.jpeg" alt="">
+        </div>
+        <div class="col col-lg-9">
+        <!-- ahora 3 divisiones para la información -->
+            <div class="row name_profile">
+                <!-- Nombre -->
+                <strong><h3>Jefferson Rodríguez</h3></strong>
+            </div>
+            <div class="row p-c-d">
+                <!-- profesion, cargo, departamento o estudios-->
+                Ms(c) Systems Engineering<br>B.Sc, Systems Engineering
+            </div>
+            <div class="row d-info">
+                <!-- demás informacion -->
+                <div class="col col-lg-auto text-left" style="padding-left:0;">
+                    <ul style=" list-style-type: none;" id="titles">
+                    <strong>
+                        <li>Email</li>
+                        <li>Email</li>
+                    </strong>
+                    </ul>
+                </div>
+                <div class="col col-lg-auto">
+                    <ul style=" list-style-type: none; margin-left:-40px;">
+                        <li>contact.me@jeffersonrodriguez.co</li>
+                        <li>jefferson.rodriguez2@saber.uis.edu.co</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class=container>
+    <div class="row justify-content-md-center ">
+        <div class="col col-lg-2">
+        <!-- aqui va la imagen -->
+            <img class="img-profile " src="imgs/Profiles/isail.jpg" alt="">
+        </div>
+        <div class="col col-lg-9">
+        <!-- ahora 3 divisiones para la información -->
+            <div class="row name_profile">
+                <!-- Nombre -->
+                <strong><h3>Isail Salazar</h3></strong>
+            </div>
+            <div class="row p-c-d">
+                <!-- profesion, cargo, departamento o estudios-->
+                Ms(c) Systems Engineering<br>B.Sc, Systems Engineering
+            </div>
+            <div class="row d-info">
+                <!-- demás informacion -->
+                <div class="col col-lg-auto text-left" style="padding-left:0;">
+                    <ul style=" list-style-type: none;" id="titles">
+                    <strong>
+                        <li>Email</li>
+                        <li>Email</li>
+                    </strong>
+                    </ul>
+                </div>
+                <div class="col col-lg-auto">
+                    <ul style=" list-style-type: none; margin-left:-40px;">
+                        <li>isail.salazar@saber.uis.edu.co</li>
+                        <li>isail1995@hotmail.com</li>
                     </ul>
                 </div>
             </div>

@@ -1,11 +1,15 @@
 
   footer{
+    /* border-top:3px solid #20AE29;
+    color:black; */
+    /* height: 200px; */
     background-color: #20AE29;
     color:white;
   }
   footer a{
     font-style: none;
     color:white;
+    /* color:black; */
   }
   footer a:hover{
     color: #554DA2;

@@ -37,38 +37,24 @@ include("navBar/navbar.html");
     </div>
 </div>
 
-
+<div class=container>
+    <div class=row>
+        <div class="col col-lg-auto">
+            <h4 class="text-left">News</h4>
+        </div>
+    </div>  
+</div>
 <!-- News -->
-<style>
-.row{
-    margin-bottom:20px;
-}
-.jumbotron{
-    height:100%;
-    padding-bottom:0;
-}
-.display-news{
-    font-size:30px;
-}
-.btn-news{
-    width:auto;
-    height:100%;
-    margin-right:10px;
-}
-.col-btn{
-        height:115px;
-}
-</style>
 <div class="row justify-content-md-center" style="margin-top:20px;">
     <div class="col col-lg-5" >
         <div class="jumbotron jumbotron-fluid" id=jum-1>
             <div class="row justify-content-md-center">
                 <div class="col col-lg-10" >
-                    <h1 class="display-4 display-news">Presence in the CCC: Colombian Conference on Computing</h1>
-                    <p class="lead">Wilson and Jefferson</p>
+                    <h1 class="display-4 display-news">Participation at 13th Colombian Conference on Computing (13CCC 2018)</h1>
+                    <p class="lead">03 October 2018</p>
                 </div>
                 <div class="col col-lg-1 col-btn" >
-                    <button type="button" class="btn btn-primary btn-lg btn-block btn-news"><strong> > </strong></button>
+                    <a href="https://uis-macv.github.io/blog/2018/10/03/13ccc2018.html" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
                 </div> 
             </div>
         </div>
@@ -77,17 +63,44 @@ include("navBar/navbar.html");
         <div class="jumbotron jumbotron-fluid" id=jum-1>
             <div class="row justify-content-md-center">
                 <div class="col col-lg-10" >
-                    <h1 class="display-4 display-news">Presence in poland</h1>
-                    <p class="lead">Jefferson was there</p>
+                    <h1 class="display-4 display-news">Participation at IEEE International Symposium on Biomedical Imaging (ISBI 2018)</h1>
+                    <p class="lead">07 April 2018</p>
                 </div>
                 <div class="col col-lg-1 col-btn" >
-                    <button type="button" class="btn btn-primary btn-lg btn-block btn-news"><strong> > </strong></button>
+                    <a href="https://uis-macv.github.io/blog/2018/04/07/isbi2018.html" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
                 </div> 
             </div>
         </div>
     </div>
 </div>
-
+<div class="row justify-content-md-center" style="margin-top:20px;">
+    <div class="col col-lg-5" >
+        <div class="jumbotron jumbotron-fluid" id=jum-1>
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-10" >
+                    <h1 class="display-4 display-news">Punto Vive Digital: now open 24h Mon-Fri</h1>
+                    <p class="lead">26 October 2017</p>
+                </div>
+                <div class="col col-lg-1 col-btn" >
+                    <a href="https://uis-macv.github.io/blog/2017/10/26/puntovivedigital.html" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="col col-lg-5" >
+        <div class="jumbotron jumbotron-fluid" id=jum-1>
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-10" >
+                    <h1 class="display-4 display-news">Successful poster presentations</h1>
+                    <p class="lead">25 October 2017</p>
+                </div>
+                <div class="col col-lg-1 col-btn" >
+                    <a href="https://uis-macv.github.io/blog/2017/10/25/eventoudi.html" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <!-- footer -->
@@ -96,3 +109,4 @@ include("navBar/footer.html");
 ?>
 </body>
 </html>
+<script>$('#example').tooltip(options)</script>

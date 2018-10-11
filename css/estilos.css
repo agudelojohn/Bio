@@ -4,10 +4,14 @@
 }
 .jumbotron{
     height:100%;
-    padding-bottom:0;
+    padding-bottom:0px;
+}
+.jumbotron p{
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 .display-news{
-    font-size:30px;
+    font-size:30px !important;
 }
 .btn-news{
     width:auto;
@@ -15,7 +19,7 @@
     margin-right:10px;
 }
 .col-btn{
-        height:115px;
+    height:115px  !important;
 }
 #logo-descripcion{
     margin-top:20px;
@@ -46,6 +50,18 @@ li .card{
     text-align:center;
     padding:10px;
 }
+.card-seed
+{
+    height:100%;
+}
+.card-seed .card-subtitle{
+    height:10%;
+ 
+}
+.card-seed .card-text{
+    /* border:2px solid red; */
+    height: 90px;
+}
 /* hasta aquí RyT */
 
 /* estilos para people */
@@ -66,6 +82,7 @@ li .card{
 .img-profile{
     width:100%;
     margin-top: 10%;
+    border-radius: 25px;
 }
 .d-info #titles{
     padding-left: 0;

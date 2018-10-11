@@ -48,7 +48,12 @@ include("navBar/navbar.html");
 </div>
 <!-- lines of research -->
 <div class="row justify-content-md-center ">
-    <div class="col col-lg-10" style="margin-top:20px;">
+    <div class="col col-lg-10" style="margin-top:20px; margin-bottom:-30px;">
+       <h4 class="text-left">Lines of research</h4>
+    </div>
+</div>
+<div class="row justify-content-md-center ">
+    <div class="col col-lg-10">
         <ul class="list-group" id=lista-de-lineas>
             <li class="list-group-item">Imaging and Inverse Problems</li>
             <li class="list-group-item">Motion Understanding</li>
@@ -57,6 +62,48 @@ include("navBar/navbar.html");
     </div>
 </div>
 
+<!-- semilleros -->
+<div class="row justify-content-md-center ">
+    <div class="col col-lg-10" style="margin-top:20px; margin-bottom:-20px;">
+       <h4 class="text-left">Seedbed</h4>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-md-center ">
+        <div class="col col-lg-4">
+            <div class="card card-seed" style="width:100%;">
+                <div class="card-body">
+                    <h5 class="card-title">MACV</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Motion Analysis and Computer Vision</h6>
+                    <p class="card-text"></p>
+                    <a href="https://uis-macv.github.io/" class="card-link ">More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4">
+            <div class="card card-seed" style="width:100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+        <div class="col col-lg-4">
+            <div class="card card-seed" style="width: 100%;">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <?php
 include("navBar/footer.html");
