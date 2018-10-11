@@ -1,0 +1,8 @@
+#logo-descripcion{
+    margin-top:20px;
+    padding: 5px;
+}
+#logo{
+    width:100%;
+    margin-top:5%;
+}

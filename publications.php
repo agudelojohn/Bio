@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="Bcss/bootstrap-grid.min.css">
     <link rel="stylesheet" type="text/css" href="Bcss/bootstrap-reboot.min.css">
     <link rel="stylesheet" type="text/css" href="navBar/navBar.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
  
 </head>
@@ -18,17 +19,6 @@
 include("navBar/navbar.html");
 ?>    
 
-<style>
-    .carousel-item{
-        max-height:800px;
-        min-height:700px;
-        overflow:hidden;
-    }
-    .carousel-item img{
-        width:100% !important;
-    }
-
-</style>
 
 <!-- carousel -->
 <div class="row justify-content-md-center">
@@ -58,8 +48,17 @@ include("navBar/navbar.html");
         </div>
     </div>
 </div>
-
 <!-- until here -->
+
+<div class="row justify-content-md-center" style="margin-top:20px;"> <!-- row to keep know where are you -->
+            <div class="col col-lg-11" > 
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page"><a href="ryt.php">Publications</a></li>
+                    </ol>
+                </nav>
+            </div>
+</div>
 
 
 

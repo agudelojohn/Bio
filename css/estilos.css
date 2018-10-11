@@ -1,0 +1,30 @@
+/* Estilos para el index */
+
+#logo-descripcion{
+    margin-top:20px;
+    padding: 5px;
+}
+#logo{
+    width:100%;
+    margin-top:5%;
+}
+/* hasta aquí el index */
+
+/* estilos publications */
+
+.carousel-item{
+    max-height:700px;
+    min-height:600px;
+    overflow:hidden;
+}
+.carousel-item img{
+    width:100% !important;
+}
+/* hasta aquí publications */
+
+/* estilos para RyT */
+#lista-de-lineas{
+    text-align:center;
+    padding:10px;
+}
+/* hasta aquí RyT */

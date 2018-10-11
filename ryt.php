@@ -6,13 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>R&T</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="Bcss/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="Bcss/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="Bcss/bootstrap-grid.css">
     <link rel="stylesheet" type="text/css" href="Bcss/bootstrap-grid.min.css">
-    <link rel="stylesheet" type="text/css" href="Bcss/bootstrap-reboot.css">
     <link rel="stylesheet" type="text/css" href="Bcss/bootstrap-reboot.min.css">
     <link rel="stylesheet" type="text/css" href="navBar/navBar.css">
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 </head>
@@ -50,15 +48,8 @@ include("navBar/navbar.html");
 </div>
 
 <!-- lines of research -->
-<style>
-    .list-group-item{
-        text-align:center;
-        padding:10px;
-    }
-</style>
-
 <div class="container" style="margin-top:20px;">
-<ul class="list-group">
+<ul class="list-group" id=lista-de-lineas>
   <li class="list-group-item">Imaging and Inverse Problems</li>
   <li class="list-group-item">Motion Understanding</li>
   <li class="list-group-item">Learning and Image representation</li>
