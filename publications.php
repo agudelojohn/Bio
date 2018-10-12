@@ -31,7 +31,7 @@ include("navBar/navbar.html");
                     <div class="col col-lg-2">
                         <h5>2018</h5>
                         <br>
-                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">More</a>
                     </div>
                 </div>
             </div>
@@ -50,7 +50,7 @@ include("navBar/navbar.html");
                         <!-- fecha -->
                         <h5>2018</h5>
                         <br>
-                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">More</a>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@ include("navBar/navbar.html");
                         <!-- fecha -->
                         <h5>2018</h5>
                         <br>
-                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">More</a>
                     </div>
                 </div>
             </div>
@@ -88,7 +88,7 @@ include("navBar/navbar.html");
                         <!-- fecha -->
                         <h5>2018</h5>
                         <br>
-                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">More</a>
                     </div>
                 </div>
             </div>
@@ -107,7 +107,7 @@ include("navBar/navbar.html");
                         <!-- fecha -->
                         <h5>2017</h5>
                         <br>
-                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">More</a>
                     </div>
                 </div>
             </div>
@@ -126,7 +126,7 @@ include("navBar/navbar.html");
                         <!-- fecha -->
                         <h5></h5>
                         <br>
-                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">More</a>
                     </div>
                 </div>
             </div>
