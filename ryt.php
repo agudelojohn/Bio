@@ -65,7 +65,7 @@ include("navBar/navbar.html");
 <!-- semilleros -->
 <div class="row justify-content-md-center ">
     <div class="col col-lg-10" style="margin-top:20px; margin-bottom:-20px;">
-       <h4 class="text-left">Seedbed</h4>
+       <h4 class="text-left">Formation Groups</h4>
     </div>
 </div>
 <div class="container">
