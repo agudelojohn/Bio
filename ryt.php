@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>R&T</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <script src="Bjs/jquery.js"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="Bcss/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="Bcss/bootstrap-grid.min.css">
     <link rel="stylesheet" type="text/css" href="Bcss/bootstrap-reboot.min.css">
     <link rel="stylesheet" type="text/css" href="navBar/navBar.css">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
+ 
 </head>
 <body>
 <?php
@@ -47,12 +49,84 @@ include("navBar/navbar.html");
     </div>
 </div>
 <!-- lines of research -->
+<style>
+    .card-header{
+    }
+    .card-header:hover{
+        background-color:#20AE29;
+    }
+    .card-header:hover .btn-link{
+        color:white !important;
+    }
+</style>
 <div class="row justify-content-md-center ">
     <div class="col col-lg-10" style="margin-top:20px; margin-bottom:-30px;">
        <h4 class="text-left">Lines of research</h4>
     </div>
 </div>
-<div class="row justify-content-md-center ">
+<br>
+<div class="container">
+        <div id="accordion">
+                <div class="card">
+                  <div class="card-header text-center" id="headingOne">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      Imaging and Inverse Problems
+                      </button>
+                    </h5>
+                  </div>
+              
+                  <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                    <div class="card-body">
+                        <ul>
+                            <li>Image Formation Models</li>
+                            <li>Image Reconstruction</li>
+                            <li>Biomedical Image Processing</li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header text-center" id="headingTwo">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      Motion Understanding
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                    <div class="card-body">
+                      <ul>
+                          <li>MU1: Motion Magnification</li>
+                          <li>MU2: Gait Analysis</li>
+                          <li>MU3: Tracking and Temporal Segmentation</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header text-center" id="headingThree">
+                    <h5 class="mb-0">
+                      <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      Learning and Image representation
+                      </button>
+                    </h5>
+                  </div>
+                  <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                    <div class="card-body">
+                      <ul>
+                          <li>LIR-1: Learning models</li>
+                          <li>LIR-2: Image Data Analytics</li>
+                          <li>LIR-3: Fusion Models</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+<!-- <div class="row justify-content-md-center ">
     <div class="col col-lg-10">
         <ul class="list-group" id=lista-de-lineas>
             <li class="list-group-item">Imaging and Inverse Problems</li>
@@ -60,17 +134,17 @@ include("navBar/navbar.html");
             <li class="list-group-item">Learning and Image representation</li>
         </ul>
     </div>
-</div>
+</div> -->
 
 <!-- semilleros -->
 <div class="row justify-content-md-center ">
-    <div class="col col-lg-10" style="margin-top:20px; margin-bottom:-20px;">
+    <div class="col col-lg-10" style="margin-top:20px; ">
        <h4 class="text-left">Formation Groups</h4>
     </div>
 </div>
 <div class="container">
     <div class="row justify-content-md-center ">
-        <div class="col col-lg-4">
+        <div class="col col-lg-6">
             <div class="card card-seed" style="width:100%;">
                 <div class="card-body">
                     <h5 class="card-title">MACV</h5>
@@ -80,19 +154,8 @@ include("navBar/navbar.html");
                 </div>
             </div>
         </div>
-        <div class="col col-lg-4">
+        <div class="col col-lg-6">
             <div class="card card-seed" style="width:100%;">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                    <a href="#" class="card-link">Another link</a>
-                </div>
-            </div>
-        </div>
-        <div class="col col-lg-4">
-            <div class="card card-seed" style="width: 100%;">
                 <div class="card-body">
                     <h5 class="card-title">Card title</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
@@ -110,8 +173,7 @@ include("navBar/footer.html");
 ?>
 </div>
 
-<script src="Bjs/bootstrap.js"></script>
-<script src="Bjs/bootstrap.min.js"></script>
+
 <script src="Bjs/bootstrap.min.js"></script>
 </body>
 </html>

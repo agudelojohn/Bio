@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>People</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    
+    <script src="Bjs/jquery.js"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="Bcss/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="Bcss/bootstrap-grid.min.css">
     <link rel="stylesheet" type="text/css" href="Bcss/bootstrap-reboot.min.css">
@@ -91,7 +93,13 @@ include("navBar/navbar.html");
                     <ul style=" list-style-type: none; margin-left:-40px;">
                         <li>gustavo.garzon@saber.uis.edu.co</li>
                         <li>gustavogarzonuis@gmail.com</li>
+                        <li><!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-gustavo">
+                            Launch demo modal
+                            </button>
+                        </li>
                     </ul>
+                    
                 </div>
             </div>
         </div>
@@ -172,14 +180,68 @@ include("navBar/navbar.html");
         </div>
     </div>
 </div>
+
+<!-- // ------------------------------------>
+<!-- MODALS -->
+<!-- ------------------------------------ -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal-gustavo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">GUSTAVO GARZÓN</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+            <div class="col col-lg-4">
+                <img class="img-profile " src="imgs/Profiles/gustavo.jpg" alt="">
+            </div>
+            <div class="col col-lg-8">
+                <ul>
+                    <li>
+                        <strong>Education</strong> <br>
+                        Ms(c) Systems Engineering B.Sc <br>
+                        Systems Engineering Tech. <br>
+                        Web Development 
+                    </li>
+                    <li>
+                        <strong>Contact Info</strong><br>
+                        gustavo.garzon@saber.uis.edu.co <br>
+                        gustavogarzonuis@gmail.com
+                    </li>
+                </ul>              
+            </div>
+        </div>
+        <div class="row justify-content-center" >
+            <div class="col col-lg-10">
+                <p class="text-center">Gustavo Garzón is currently a candidate for Master in Systems Engineering and Informatics at Universidad Industrial de Santander (Colombia). His research interests include: action recognition, pattern recognition, computer vision, motion analysis, image processing and machine learning. He works at BIVLab as Research Assistant and helps with student advising on computer vision related areas.</p>
+            </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 <?php
 include("navBar/footer.html");
 ?>    
 </div>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+<script src="Bjs/bootstrap.min.js"></script>
 </body>
 </html>
