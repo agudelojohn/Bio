@@ -22,142 +22,42 @@ include("navBar/navbar.html");
 ?>    
 <div class="container">
     <ul id=lista-de-publicaciones>
-        <li style="margin-top:30px;">
-            <div class="card border-left-0" >
-                <div class="card-body row pre-publications" >
-                    <div class="col col-lg-10">
-                        <h5 class="card-title">Frame-Level Covariance Descriptor for Action Recognition </h5>
-                        <h6 class="card-subtitle mb-2 text-muted">W Moreno, G Garzón, F Martínez</h6>
-                        <p class="card-text">Colombian Conference on Computing, 276-290</p>
-                    </div>
-                    <div class="col col-lg-2">
-                        <h5>2018</h5>
-                    </div>
-                    <div class="col col-lg-12">
-                    <br>
-                        <a href="#" class="card-link">PDF</a>
-                        <a href="#" class="card-link">Código</a>
-                        <a href="#" class="card-link">URL</a>
-                    </div>
+
+<?PHP
+// desde aquí la conexión a la BD
+require("php/conexion.php");
+// sentencia
+$sql="Select*from publications order by title;";
+// query para mandar la sentencia
+$resultado = mysqli_query($conexion,$sql);
+// toma los datos en un array
+while($array=mysqli_fetch_array($resultado)){
+    // primero saco la fecha como la necesitamos
+    
+echo    '<li style="margin-top:30px;">
+        <div class="card border-left-0" >
+            <div class="card-body row pre-publications" >
+                <div class="col col-lg-10">
+                    <h5 class="card-title">'.$array['title'].' </h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Esto hay que cambiarlo, son los autores</h6>
+                    <p class="card-text">aquí la el lugar donde lo presentaron o algo así</p>
+                </div>
+                <div class="col col-lg-2">
+                    <h5>'.substr($array['date_publication'], 0, 4).'</h5>
+                </div>
+                <div class="col col-lg-12">
+                <br>
+                    <a href="#" class="card-link">PDF</a>
+                    <a href="#" class="card-link">Código</a>
+                    <a href="#" class="card-link">URL</a>
                 </div>
             </div>
+        </div>
         </li>
-        <li>
-            <div class="card border-left-0" >
-                <div class="card-body row pre-publications" >
-                    <div class="col col-lg-10">
-                        <!-- datos -->
-                        <h5 class="card-title">Towards On-Line Sign Language Recognition Using Cumulative SD-VLAD Descriptors </h5>
-                        <h6 class="card-subtitle mb-2 text-muted">J Rodríguez, F Martínez</h6>
-                        <p class="card-text">Colombian Conference on Computing, 371-385</p>
-                       
-                    </div>
-                    <div class="col col-lg-2">
-                        <!-- fecha -->
-                        <h5>2018</h5>
-                    </div>
-                    <div class="col col-lg-12">
-                    <br>
-                        <a href="#" class="card-link">PDF</a>
-                        <a href="#" class="card-link">Código</a>
-                        <a href="#" class="card-link">URL</a>
-                    </div>
-                    
-                </div>
-            </div>
-        </li>
-        <li >
-            <div class="card border-left-0" >
-                <div class="card-body row pre-publications" >
-                    <div class="col col-lg-10">
-                        <!-- datos -->
-                        <h5 class="card-title">A Kinematic Gesture Representation Based on Shape Difference VLAD for Sign Language Recognition </h5>
-                        <h6 class="card-subtitle mb-2 text-muted">J Rodríguez, F Martínez</h6>
-                        <p class="card-text">International Conference on Computer Vision and Graphics, 438-449</p>
-                       
-                    </div>
-                    <div class="col col-lg-2">
-                        <!-- fecha -->
-                        <h5>2018</h5>
-                    </div>
-                    <div class="col col-lg-12">
-                    <br>
-                        <a href="#" class="card-link">PDF</a>
-                        <a href="#" class="card-link">Código</a>
-                        <a href="#" class="card-link">URL</a>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li >
-            <div class="card border-left-0" >
-                <div class="card-body row pre-publications" >
-                    <div class="col col-lg-10">
-                        <!-- datos -->
-                        <h5 class="card-title">Cardiac disease prediction from spatio-temporal motion patterns in cine-MRI  </h5>
-                        <h6 class="card-subtitle mb-2 text-muted">E Sarmiento, J Pico, F Martinez</h6>
-                        <p class="card-text">Biomedical Imaging (ISBI 2018), 2018 IEEE 15th International Symposium on …</p>
-                       
-                    </div>
-                    <div class="col col-lg-2">
-                        <!-- fecha -->
-                        <h5>2018</h5>
-                    </div>
-                    <div class="col col-lg-12">
-                    <br>
-                        <a href="#" class="card-link">PDF</a>
-                        <a href="#" class="card-link">Código</a>
-                        <a href="#" class="card-link">URL</a>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li >
-            <div class="card border-left-0" >
-                <div class="card-body row pre-publications" >
-                    <div class="col col-lg-10">
-                        <!-- datos -->
-                        <h5 class="card-title">Spatio-temporal multi-scale motion descriptor from a spatially-constrained decomposition for online action recognition  </h5>
-                        <h6 class="card-subtitle mb-2 text-muted">F Martínez, A Manzanera, E Romero</h6>
-                        <p class="card-text">IET Computer Vision 11 (7), 541-549</p>
-                       
-                    </div>
-                    <div class="col col-lg-2">
-                        <!-- fecha -->
-                        <h5>2017</h5>
-                    </div>
-                    <div class="col col-lg-12">
-                    <br>
-                        <a href="#" class="card-link">PDF</a>
-                        <a href="#" class="card-link">Código</a>
-                        <a href="#" class="card-link">URL</a>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li >
-            <div class="card border-left-0" >
-                <div class="card-body row pre-publications" >
-                    <div class="col col-lg-10">
-                        <!-- datos -->
-                        <h5 class="card-title">A multiresolution prostate representation for automatic segmentation in magnetic resonance images  </h5>
-                        <h6 class="card-subtitle mb-2 text-muted">C Alvarez, F Martínez, E Romero</h6>
-                        <p class="card-text">Medical physics 44 (4), 1312-1323</p>
-                       
-                    </div>
-                    <div class="col col-lg-2">
-                        <!-- fecha -->
-                        <h5></h5>
-                    </div>
-                    <div class="col col-lg-12">
-                    <br>
-                        <a href="#" class="card-link">PDF</a>
-                        <a href="#" class="card-link">Código</a>
-                        <a href="#" class="card-link">URL</a>
-                    </div>
-                </div>
-            </div>
-        </li>
+';
+}
+?>
+        
     </ul>
 </div>
 

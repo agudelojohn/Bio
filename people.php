@@ -91,7 +91,7 @@ echo '
             <div class="row justify-content-md-center ">
                 <div class="col col-lg-2">
                 <!-- aqui va la imagen -->
-                    <img class="img-profile " src="'.$array['img'].'" alt="">
+                    <img class="img-profile " src="'.$array['img_profile'].'" alt="">
                 </div>
                 <div class="col col-lg-9">
                 <!-- ahora 3 divisiones para la información -->
@@ -138,7 +138,7 @@ if(($contact_pieces[2]!=null)&&($contact_pieces!="null"))
 echo'
                                 
                                 <li style="margin-top:10px;"><!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-'.$array['id'].'">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-'.$array['id_profile'].'">
                                     Complete profile
                                     </button>
                                 </li>
@@ -156,7 +156,7 @@ echo'
         
         
         <!-- Modal -->
-        <div class="modal fade" id="modal-'.$array['id'].'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal fade" id="modal-'.$array['id_profile'].'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -168,7 +168,7 @@ echo'
               <div class="modal-body">
                 <div class="row justify-content-center">
                     <div class="col col-lg-4">
-                        <img class="img-profile " src="'.$array['img'].'" alt="">
+                        <img class="img-profile " src="'.$array['img_profile'].'" alt="">
                     </div>
                     <div class="col col-lg-8">
                         <ul>
@@ -199,6 +199,25 @@ echo '
                         <p class="text-center">'.$array['resum'].'</p>
                     </div>
                 </div>
+ <!--espacio para colocar el resultado de las publicaciones, segunda consulta-->
+                <div class="row justify-content-center" >
+                <div class="col col-lg-10">
+                    <h3>Publications</h3>
+                    <ul>';
+$sql_dos="SELECT * FROM people_profiles JOIN author JOIN publications on people_profiles.id_profile=author.id_people and author.id_publication=publications.id_publication where people_profiles.id_profile='$array[id_profile]'";
+// query para mandar la sentencia
+$resultado2 = mysqli_query($conexion,$sql_dos);
+// toma los datos en un array
+    while($array_dos=mysqli_fetch_array($resultado2)){
+    echo'           <li>    
+                        <p class="text-left"><strong>'.$array_dos['title'].'</strong><br>'.$array_dos['abstract'].'</p>
+                    </li>
+    ';
+    }
+echo '  
+                    </ul>
+                </div>
+            </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
