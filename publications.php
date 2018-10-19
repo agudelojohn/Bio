@@ -32,8 +32,12 @@ include("navBar/navbar.html");
                     </div>
                     <div class="col col-lg-2">
                         <h5>2018</h5>
-                        <br>
-                        <a href="#" class="card-link">More</a>
+                    </div>
+                    <div class="col col-lg-12">
+                    <br>
+                        <a href="#" class="card-link">PDF</a>
+                        <a href="#" class="card-link">Código</a>
+                        <a href="#" class="card-link">URL</a>
                     </div>
                 </div>
             </div>
@@ -51,9 +55,14 @@ include("navBar/navbar.html");
                     <div class="col col-lg-2">
                         <!-- fecha -->
                         <h5>2018</h5>
-                        <br>
-                        <a href="#" class="card-link">More</a>
                     </div>
+                    <div class="col col-lg-12">
+                    <br>
+                        <a href="#" class="card-link">PDF</a>
+                        <a href="#" class="card-link">Código</a>
+                        <a href="#" class="card-link">URL</a>
+                    </div>
+                    
                 </div>
             </div>
         </li>
@@ -70,8 +79,12 @@ include("navBar/navbar.html");
                     <div class="col col-lg-2">
                         <!-- fecha -->
                         <h5>2018</h5>
-                        <br>
-                        <a href="#" class="card-link">More</a>
+                    </div>
+                    <div class="col col-lg-12">
+                    <br>
+                        <a href="#" class="card-link">PDF</a>
+                        <a href="#" class="card-link">Código</a>
+                        <a href="#" class="card-link">URL</a>
                     </div>
                 </div>
             </div>
@@ -89,8 +102,12 @@ include("navBar/navbar.html");
                     <div class="col col-lg-2">
                         <!-- fecha -->
                         <h5>2018</h5>
-                        <br>
-                        <a href="#" class="card-link">More</a>
+                    </div>
+                    <div class="col col-lg-12">
+                    <br>
+                        <a href="#" class="card-link">PDF</a>
+                        <a href="#" class="card-link">Código</a>
+                        <a href="#" class="card-link">URL</a>
                     </div>
                 </div>
             </div>
@@ -108,8 +125,12 @@ include("navBar/navbar.html");
                     <div class="col col-lg-2">
                         <!-- fecha -->
                         <h5>2017</h5>
-                        <br>
-                        <a href="#" class="card-link">More</a>
+                    </div>
+                    <div class="col col-lg-12">
+                    <br>
+                        <a href="#" class="card-link">PDF</a>
+                        <a href="#" class="card-link">Código</a>
+                        <a href="#" class="card-link">URL</a>
                     </div>
                 </div>
             </div>
@@ -127,8 +148,12 @@ include("navBar/navbar.html");
                     <div class="col col-lg-2">
                         <!-- fecha -->
                         <h5></h5>
-                        <br>
-                        <a href="#" class="card-link">More</a>
+                    </div>
+                    <div class="col col-lg-12">
+                    <br>
+                        <a href="#" class="card-link">PDF</a>
+                        <a href="#" class="card-link">Código</a>
+                        <a href="#" class="card-link">URL</a>
                     </div>
                 </div>
             </div>
