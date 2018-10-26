@@ -1,0 +1,70 @@
+create database bivlab;
+
+create table people_profiles(
+#change to auto_increment
+    id_profile int PRIMARY KEY AUTO_INCREMENT not null,
+    name varchar(50) not null,
+    img_profile varchar(100) not null,
+#max de 5 titulos, separados por ";"
+    education varchar(200),
+#dos emails, un tel
+    contact varchar(200),
+    resum varchar(600) 
+    );
+
+
+insert into people_profiles values( 1, 'GUSTAVO GARZon','imgs/profiles/gustavo.jpg','Ms(c) Systems Engineering B.Sc;Systems Engineering Tech.; Web Development','gustavo.garzon@saber.uis.edu.co;gustavogarzonuis@gmail.com','Gustavo Garzón is currently a candidate for Master in Systems Engineering and Informatics at Universidad Industrial de Santander (Colombia). His research interests include: action recognition, pattern recognition, computer vision, motion analysis, image processing and machine learning. He works at BIVLab as Research Assistant and helps with student advising on computer vision related areas.');
+insert into people_profiles values( 2, 'JEFFERSON RODRÍGUEZ', 'imgs/profiles/jefferson.jpeg','Ms(c) Systems Engineering B.Sc; Systems Engineering','contact.me@jeffersonrodriguez.co;jefferson.rodriguez2@saber.uis.edu.co','I’m from Bucaramanga in Colombia. Passionate about computer vision, technology, travel, football and cycling. Currently, I’m a Master’s student in Computer Science and I work at Biomedical imaging, Vision and Learning Laboratoy (BivLab).');
+insert into people_profiles values( 3, 'ISAIL SALAZAR', 'imgs/profiles/isail.jpg','Ms(c) Systems Engineering B.Sc;Electronic Engineering','isail.salazar@saber.uis.edu.co;isail1995@hotmail.com',"Isail Salazar is currently a candidate for Master in Systems Engineering and Informatics at Universidad Industrial de Santander (Colombia), where he's associated at Biomedical Imaging, Vision and Learning Laboratory (BIVLab) and Motion Analysis and Computer Vision (MACV) collective. His research work has been focused mainly in image segmentation, RGB-D image processing, eye movement analysis and motion magnification.");
+
+create table publications(
+	id_publication int PRIMARY KEY AUTO_INCREMENT not null,
+	title varchar(100) not null,
+	pdf_publication varchar(100) not null,
+	img_publication varchar(100) not null,
+	abstract varchar(500) not null, 
+	codigo varchar(100),
+	url varchar(100),
+	date_publication date
+#DATE - format YYYY-MM-DD
+	);
+
+create table author(
+	id_publication int,
+	id_people int,
+    CONSTRAINT id_persons FOREIGN KEY (id_people) REFERENCES people_profiles(id_profile),
+    CONSTRAINT id_pubs FOREIGN KEY (id_publication) REFERENCES publications(id_publication)
+);
+
+
+
+insert into publications values('01','A local Poisson-salient point representation to efficiently characterize human actions.','imgs/publications/brain.png','A local Poisson-salient point representation to efficiently characterize human actions.','2018-01-01');
+insert into author values('01','1');
+insert into publications values('02','Frame-Level Covariance Descriptor for Action Recognition.','imgs/publications/cat.jpg','Frame-Level Covariance Descriptor for Action Recognition.','2017-01-01');
+insert into author value('02','2');
+#SELECT * FROM people_profiles JOIN author JOIN publications on people_profiles.id_profile=author.id_people and author.id_publication=publications.id_publication where people_profiles.id_profile='1'
+
+create table clases(
+    id_clase varchar(3) int PRIMARY KEY AUTO_INCREMENT not null,
+    nombre_clase varchar(50) not null,
+    descripcion varchar(200) not null,
+    aula varchar(7) not null,
+    horario varchar(100),
+    profesor varchar(3),
+    CONSTRAINT id_encargado FOREIGN KEY (profesor) REFERENCES people_profiles(id_profile)
+    );
+
+
+create table edificios(
+    id_edificios int PRIMARY KEY AUTO_INCREMENT,
+    nombre varchar(5)
+    );
+
+#select * from people_profiles join clases on clases.profesor=people_profiles.id_profile;
+insert into edificios(nombre) values('LP');
+insert into edificios(nombre) values('IL');
+insert into edificios(nombre) values('II');
+insert into edificios(nombre) values('CENTIC');
+insert into edificios(nombre) values('LV');
+INSERT into people_profiles values('05','Lola',' ','muchos estudios','asdasd@asfasd.com','es una profesora muy independiente');
+insert into clases values('001','Matemáticas discretas','Materia que es de matemáticas','LP-309','Lu 8:00-10:00;Mar 10:00-12:00','05');
