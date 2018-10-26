@@ -20,8 +20,11 @@ insert into people_profiles values( 3, 'ISAIL SALAZAR', 'imgs/profiles/isail.jpg
 create table publications(
 	id_publication varchar(3) primary key not null,
 	title varchar(100) not null,
+	pdf_publication varchar(100) not null,
 	img_publication varchar(100) not null,
 	abstract varchar(500) not null, 
+	codigo varchar(100),
+	url varchar(100),
 	date_publication date
 #DATE - format YYYY-MM-DD
 	);

@@ -47,7 +47,7 @@ echo    '<li style="margin-top:30px;">
                 </div>
                 <div class="col col-lg-12">
                 <br>
-                    <a href="#" class="card-link">PDF</a>
+                    <a href="'.$array['pdf_publication'].'" class="card-link" download>PDF</a>
                     <a href="#" class="card-link">Código</a>
                     <a href="#" class="card-link">URL</a>
                 </div>
