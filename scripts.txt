@@ -39,5 +39,29 @@ insert into publications values('01','A local Poisson-salient point representati
 insert into author values('01','1');
 insert into publications values('02','Frame-Level Covariance Descriptor for Action Recognition.','imgs/publications/cat.jpg','Frame-Level Covariance Descriptor for Action Recognition.','2017-01-01');
 insert into author value('02','2');
-SELECT * FROM people_profiles JOIN author JOIN publications on people_profiles.id_profile=author.id_people and author.id_publication=publications.id_publication where people_profiles.id_profile='1'
+#SELECT * FROM people_profiles JOIN author JOIN publications on people_profiles.id_profile=author.id_people and author.id_publication=publications.id_publication where people_profiles.id_profile='1'
 
+create table clases(
+    id_clase varchar(3) not null PRIMARY KEY,
+    nombre_clase varchar(50) not null,
+    descripcion varchar(200) not null,
+    aula varchar(7) not null,
+    horario varchar(100),
+    profesor varchar(3),
+    CONSTRAINT id_encargado FOREIGN KEY (profesor) REFERENCES people_profiles(id_profile)
+    );
+
+
+create table edificios(
+    id_edificios int PRIMARY KEY AUTO_INCREMENT,
+    nombre varchar(5)
+    );
+
+#select * from people_profiles join clases on clases.profesor=people_profiles.id_profile;
+insert into edificios(nombre) values('LP');
+insert into edificios(nombre) values('IL');
+insert into edificios(nombre) values('II');
+insert into edificios(nombre) values('CENTIC');
+insert into edificios(nombre) values('LV');
+INSERT into people_profiles values('05','Lola',' ','muchos estudios','asdasd@asfasd.com','es una profesora muy independiente');
+insert into clases values('001','Matemáticas discretas','Materia que es de matemáticas','LP-309','Lu 8:00-10:00;Mar 10:00-12:00','05');

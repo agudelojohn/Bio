@@ -14,8 +14,8 @@
     /* position: fixed; */
 }
 .card-link{
-    pointer-events: none;
-    cursor: default;
+    /* pointer-events: none;
+    cursor: default; */
     /* text-decoration: none; */
     /* color: black; */
 }
