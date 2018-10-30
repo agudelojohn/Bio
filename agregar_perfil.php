@@ -30,7 +30,12 @@ include("navBar/navbar.html");
             </div>
 </div>
 <div class=container>
-    <form>
+<!-- <form method="post" action="php/metodos.php" enctype="multipart/form-data" onsubmit="return validarRegistro()" >
+            <!--Titulo para saber quien envía la información 
+            <input type="text" name="titulo" value="guardarServicio" style="display:none;"> -->
+    <form method="post" action="php/metodos.php" enctype="multipart/form-data">
+    <!-- Titulo para saber quien envía la información  -->
+    <input type="text" name="titulo" value="agregar_perfil" style="display:none;">
     <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" aria-describedby="nameProfile" placeholder="Enter name" maxlength=50>
@@ -38,8 +43,8 @@ include("navBar/navbar.html");
     </div>
     <label >Image</label>
     <div class="custom-file" style="margin-bottom:30px;">        
-        <input type="file" class="custom-file-input" id="customFile">
-        <label class="custom-file-label" for="customFile">Choose image profile</label>
+        <input type="file" class="custom-file-input" id="img_profile" name="img_profile">
+        <label class="custom-file-label" for="img_profile">Choose image profile</label>
     </div>
     <div class="form-group">
         <label for="education">Education</label>
