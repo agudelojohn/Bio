@@ -47,63 +47,63 @@ include("navBar/navbar.html");
     </div>  
 </div>
 <!-- News -->
-<div class="row justify-content-md-center" style="margin-top:20px;">
-    <div class="col col-lg-5" >
-        <div class="jumbotron jumbotron-fluid" id=jum-1>
-            <div class="row justify-content-md-center">
-                <div class="col col-lg-10" >
-                    <h1 class="display-4 display-news">Participation at 13th Colombian Conference on Computing (13CCC 2018)</h1>
-                    <p class="lead">03 October 2018</p>
-                </div>
-                <div class="col col-lg-1 col-btn" >
-                    <a href="https://uis-macv.github.io/blog/2018/10/03/13ccc2018.html" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
-                </div> 
-            </div>
-        </div>
-    </div>
-    <div class="col col-lg-5" >
-        <div class="jumbotron jumbotron-fluid" id=jum-1>
-            <div class="row justify-content-md-center">
-                <div class="col col-lg-10" >
-                    <h1 class="display-4 display-news">Participation at IEEE International Symposium on Biomedical Imaging (ISBI 2018)</h1>
-                    <p class="lead">07 April 2018</p>
-                </div>
-                <div class="col col-lg-1 col-btn" >
-                    <a href="https://uis-macv.github.io/blog/2018/04/07/isbi2018.html" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
-                </div> 
-            </div>
-        </div>
-    </div>
-</div>
-<div class="row justify-content-md-center" style="margin-top:20px;">
-    <div class="col col-lg-5" >
-        <div class="jumbotron jumbotron-fluid" id=jum-1>
-            <div class="row justify-content-md-center">
-                <div class="col col-lg-10" >
-                    <h1 class="display-4 display-news">Punto Vive Digital: now open 24h Mon-Fri</h1>
-                    <p class="lead">26 October 2017</p>
-                </div>
-                <div class="col col-lg-1 col-btn" >
-                    <a href="https://uis-macv.github.io/blog/2017/10/26/puntovivedigital.html" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
-                </div> 
-            </div>
-        </div>
-    </div>
-    <div class="col col-lg-5" >
-        <div class="jumbotron jumbotron-fluid" id=jum-1>
-            <div class="row justify-content-md-center">
-                <div class="col col-lg-10" >
-                    <h1 class="display-4 display-news">Successful poster presentations</h1>
-                    <p class="lead">25 October 2017</p>
-                </div>
-                <div class="col col-lg-1 col-btn" >
-                    <a href="https://uis-macv.github.io/blog/2017/10/25/eventoudi.html" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
-                </div> 
-            </div>
-        </div>
-    </div>
-</div>
 
+<?PHP
+
+// desde aquí la conexión a la BD
+require("php/conexion.php");
+// sentencia
+$sql="Select*from news order by counter;";
+// query para mandar la sentencia
+$resultado = mysqli_query($conexion,$sql);
+// toma los datos en un array
+$contador=1;
+while($array=mysqli_fetch_array($resultado)){
+if($contador==1){
+    echo'
+    <div class="row justify-content-md-center" style="margin-top:20px;">
+        <div class="col col-lg-5" >
+            <div class="jumbotron jumbotron-fluid" id=jum-1>
+                <div class="row justify-content-md-center">
+                    <div class="col col-lg-10" >
+                        <h1 class="display-4 display-news">'.$array['title'].'</h1>
+                        <p class="lead">'.$array['date_new'].'</p>
+                    </div>
+                    <div class="col col-lg-1 col-btn" >
+                        <a href="'.$array['url'].'" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    
+    ';
+    $contador=0;
+}else
+    {
+    echo'
+        <div class="col col-lg-5" >
+        <div class="jumbotron jumbotron-fluid" id=jum-1>
+            <div class="row justify-content-md-center">
+                <div class="col col-lg-10" >
+                    <h1 class="display-4 display-news">'.$array['title'].'</h1>
+                    <p class="lead">'.$array['date_new'].'</p>
+                </div>
+                <div class="col col-lg-1 col-btn" >
+                    <a href="'.$array['url'].'" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
+                </div> 
+            </div>
+        </div>
+        </div>
+    </div>';
+    $contador=1;
+    }
+}
+
+if($contador==0)
+{
+    echo'</div>';
+}
+?>
 
 <!-- footer -->
 <?php
