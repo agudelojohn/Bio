@@ -33,35 +33,35 @@ include("navBar/navbar.html");
 <!-- <form method="post" action="php/metodos.php" enctype="multipart/form-data" onsubmit="return validarRegistro()" >
             <!--Titulo para saber quien envía la información 
             <input type="text" name="titulo" value="guardarServicio" style="display:none;"> -->
-    <form method="post" action="php/metodos.php" enctype="multipart/form-data">
+    <form method="post" action="php/metodos/agregar_perfil.php" enctype="multipart/form-data">
     <!-- Titulo para saber quien envía la información  -->
-    <input type="text" name="titulo" value="agregar_perfil" style="display:none;">
-    <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" class="form-control" id="name" aria-describedby="nameProfile" placeholder="Enter name" maxlength=50>
-        <small id="nameProfile" class="form-text text-muted">This will show up on each profile</small>
-    </div>
-    <label >Image</label>
-    <div class="custom-file" style="margin-bottom:30px;">        
-        <input type="file" class="custom-file-input" id="img_profile" name="img_profile">
-        <label class="custom-file-label" for="img_profile">Choose image profile</label>
-    </div>
-    <div class="form-group">
-        <label for="education">Education</label>
-        <input type="text" class="form-control" id="education" aria-describedby="educationProfile" placeholder="Enter education info"  maxlength=200>
-        <small id="educationProfile" class="form-text text-muted">Please separe each new line with semicolon (;)</small>
-    </div>
-    <div class="form-group">
-        <label for="emails">Contact</label>
-        <input type="text" class="form-control" id="emails" aria-describedby="contactProfile" placeholder="Enter contact info"  maxlength=200>
-        <small id="contactProfile" class="form-text text-muted">Please separe each new line with semicolon (;)</small>
-    </div>
-    <div class="form-group">
-        <label for="resume">Resume</label>
-        <textarea class="form-control" id="resume" rows="3" placeholder="Please enter details about the person"  maxlength=600></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    <button type="reset" class="btn btn-primary" value="Reset" style="margin-left:20px;">Reset</button>
+        <!-- <input type="text" name="titulo" value="agregar_perfil" style="display:none;"> -->
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" name="name" aria-describedby="nameProfile" placeholder="Enter name" maxlength=50>
+            <small id="nameProfile" class="form-text text-muted">This will show up on each profile</small>
+        </div>
+        <label >Image</label>
+        <div class="custom-file" style="margin-bottom:30px;">        
+            <input type="file" class="custom-file-input" id="img_profile" name="img_profile">
+            <label class="custom-file-label" for="img_profile">Choose image profile</label>
+        </div>
+        <div class="form-group">
+            <label for="education">Education</label>
+            <input type="text" class="form-control" id="education" name=education aria-describedby="educationProfile" placeholder="Enter education info"  maxlength=200>
+            <small id="educationProfile" class="form-text text-muted">Please separe each new line with semicolon (;)</small>
+        </div>
+        <div class="form-group">
+            <label for="emails">Contact</label>
+            <input type="text" class="form-control" id="emails" name=emails aria-describedby="contactProfile" placeholder="Enter contact info"  maxlength=200>
+            <small id="contactProfile" class="form-text text-muted">Please separe each new line with semicolon (;)</small>
+        </div>
+        <div class="form-group">
+            <label for="resume">Resume</label>
+            <textarea class="form-control" id="resume" name=resume rows="3" placeholder="Please enter details about the person"  maxlength=800></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary" value="Reset" style="margin-left:20px;">Reset</button>
     </form>
     <br>
 </div>
