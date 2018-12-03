@@ -59,43 +59,46 @@ $resultado = mysqli_query($conexion,$sql);
 // toma los datos en un array
 $contador=1;
 while($array=mysqli_fetch_array($resultado)){
-if($contador==1){
-    echo'
-    <div class="row justify-content-md-center" style="margin-top:20px;">
-        <div class="col col-lg-5" >
-            <div class="jumbotron jumbotron-fluid" id=jum-1>
-                <div class="row justify-content-md-center">
-                    <div class="col col-lg-10" >
-                        <h1 class="display-4 display-news">'.$array['title'].'</h1>
-                        <p class="lead">'.$array['date_new'].'</p>
+    if($array['counter']!=0)
+    {                
+        if($contador==1){
+            echo'
+            <div class="row justify-content-md-center" style="margin-top:20px;">
+                <div class="col col-lg-5" >
+                    <div class="jumbotron jumbotron-fluid" id=jum-1>
+                        <div class="row justify-content-md-center">
+                            <div class="col col-lg-10" >
+                                <h1 class="display-4 display-news">'.$array['title'].'</h1>
+                                <p class="lead">'.$array['date_new'].'</p>
+                            </div>
+                            <div class="col col-lg-1 col-btn" >
+                                <a href="'.$array['url'].'" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
+                            </div> 
+                        </div>
                     </div>
-                    <div class="col col-lg-1 col-btn" >
-                        <a href="'.$array['url'].'" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
-                    </div> 
                 </div>
-            </div>
-        </div>
-    
-    ';
-    $contador=0;
-}else
-    {
-    echo'
-        <div class="col col-lg-5" >
-        <div class="jumbotron jumbotron-fluid" id=jum-1>
-            <div class="row justify-content-md-center">
-                <div class="col col-lg-10" >
-                    <h1 class="display-4 display-news">'.$array['title'].'</h1>
-                    <p class="lead">'.$array['date_new'].'</p>
+            
+            ';
+            $contador=0;
+        }else
+            {
+            echo'
+                <div class="col col-lg-5" >
+                <div class="jumbotron jumbotron-fluid" id=jum-1>
+                    <div class="row justify-content-md-center">
+                        <div class="col col-lg-10" >
+                            <h1 class="display-4 display-news">'.$array['title'].'</h1>
+                            <p class="lead">'.$array['date_new'].'</p>
+                        </div>
+                        <div class="col col-lg-1 col-btn" >
+                            <a href="'.$array['url'].'" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
+                        </div> 
+                    </div>
                 </div>
-                <div class="col col-lg-1 col-btn" >
-                    <a href="'.$array['url'].'" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
-                </div> 
-            </div>
-        </div>
-        </div>
-    </div>';
-    $contador=1;
+                </div>
+            </div>';
+            $contador=1;
+            }
     }
 }
 

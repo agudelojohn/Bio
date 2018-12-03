@@ -24,27 +24,27 @@ include("navBar/navbar.html");
             <div class="col col-lg-11" > 
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item active" aria-current="page"><a href="ryt.php">Manage news</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="ryt.php">Add Publication</a></li>
                     </ol>
                 </nav>
             </div>
 </div>
 <div class=container>
-    <form method="post" action="php/metodos/agregar_noticia.php">
+    <form>
     <div class="form-group">
         <label for="title">Title</label>
-        <input type="text" class="form-control" name=title id="title" aria-describedby="titleNew" placeholder="Enter title" maxlength=100>
+        <input type="text" class="form-control" id="tile" aria-describedby="titleNew" placeholder="Enter title" maxlength=100>
         <small id="titleNew" class="form-text text-muted">Main title of each new</small>
     </div>
     <div class="form-group">
         <label for="date">Date</label>
-        <input type="date" class="form-control" name=date id="date" aria-describedby="dateNew" placeholder="Event date"> 
+        <input type="date" class="form-control" id="date" aria-describedby="dateNew" placeholder="Event date"> 
         <!-- si sirve el formato de fecha predetermiado -->
         <small id="dateNew" class="form-text text-muted">Date that will be show up</small>
     </div>
     <div class="form-group">
         <label for="url">Url</label>
-        <input type="text" class="form-control" name=url id="url" aria-describedby="urlNew" placeholder="Enter url to reach it"  maxlength=200>
+        <input type="text" class="form-control" id="url" aria-describedby="urlNew" placeholder="Enter url to reach it"  maxlength=200>
         <small id="urlNew" class="form-text text-muted">Url to see the complete new</small>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
