@@ -30,25 +30,45 @@ include("navBar/navbar.html");
             </div>
 </div>
 <div class=container>
-    <form>
-    <div class="form-group">
-        <label for="title">Title</label>
-        <input type="text" class="form-control" id="tile" aria-describedby="titleNew" placeholder="Enter title" maxlength=100>
-        <small id="titleNew" class="form-text text-muted">Main title of each new</small>
-    </div>
-    <div class="form-group">
-        <label for="date">Date</label>
-        <input type="date" class="form-control" id="date" aria-describedby="dateNew" placeholder="Event date"> 
-        <!-- si sirve el formato de fecha predetermiado -->
-        <small id="dateNew" class="form-text text-muted">Date that will be show up</small>
-    </div>
-    <div class="form-group">
-        <label for="url">Url</label>
-        <input type="text" class="form-control" id="url" aria-describedby="urlNew" placeholder="Enter url to reach it"  maxlength=200>
-        <small id="urlNew" class="form-text text-muted">Url to see the complete new</small>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-    <button type="reset" class="btn btn-primary" value="Reset" style="margin-left:20px;">Reset</button>
+    <form method="post" action="php/metodos/agregar_publicacion.php" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" name=title id="tile" aria-describedby="titleNew" placeholder="Enter title" maxlength=100>
+            <small id="titleNew" class="form-text text-muted">Main title of each new</small>
+        </div>
+        <label >PDF</label>
+        <div class="custom-file" style="margin-bottom:30px;">        
+            <input type="file" class="custom-file-input" id="pdf_pub" name="pdf_pub">
+            <label class="custom-file-label" for="pdf_pub">Choose PDF for download</label>
+        </div>
+        <label >Image</label>
+        <div class="custom-file" style="margin-bottom:30px;">        
+            <input type="file" class="custom-file-input" id="img_profile" name="img_pub">
+            <label class="custom-file-label" for="img_pub">Choose image to show</label>
+        </div>
+        <div class="form-group">
+            <label for="abstract">Abstract</label>
+            <textarea class="form-control" name=abstract id="abstract" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="code">Code</label>
+            <input type="text" class="form-control" name=code id="code" aria-describedby="titleNew" placeholder="Enter title" maxlength=100>
+            <small id="titleNew" class="form-text text-muted">Link to download this code</small>
+        </div>
+        <div class="form-group">
+            <label for="url_pub">URL</label>
+            <input type="text" class="form-control" name=url_pub id="url_pub" aria-describedby="titleNew" placeholder="Enter title" maxlength=100>
+            <small id="urlPub" class="form-text text-muted">URL to get more information</small>
+        </div>
+        <div class="form-group">
+            <label for="date">Date</label>
+            <input type="date" class="form-control" name=date id="date" aria-describedby="dateNew" placeholder="Event date"> 
+            <!-- si sirve el formato de fecha predetermiado -->
+            <small id="dateNew" class="form-text text-muted">Date of creation</small>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary" value="Reset" style="margin-left:20px;">Reset</button>
     </form>
     <br>
 </div>
