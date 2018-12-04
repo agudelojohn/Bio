@@ -1,3 +1,5 @@
+user: Jagudelo
+pass: Johnagudelo4124
 create database bivlab;
 
 create table people_profiles(
@@ -84,3 +86,10 @@ create table news(
 insert into news values(1,'Participation at 13th Colombian Conference on Computing (13CCC 2018)','2018-10-03','https://uis-macv.github.io/blog/2018/10/03/13ccc2018.html');
 insert into news values(2,'Participation at IEEE International Symposium on Biomedical Imaging (ISBI 2018)','2018-04-07','https://uis-macv.github.io/blog/2018/04/07/isbi2018.html');
 insert into news values(3,'Punto Vive Digital: now open 24h Mon-Fri','2017-10-26','https://uis-macv.github.io/blog/2017/10/26/puntovivedigital.html');
+
+
+create table acceso(
+    id varchar(100),
+    pass varchar(100));
+    
+ insert into acceso values('johnagudelo','g4m3s0fthr0n3s4124');

@@ -1,3 +1,7 @@
+<?PHP
+session_start();
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,10 +20,15 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
  
 </head>
-<body>
+<body> 
 <?php
-include("navBar/navbar.html");
-?>    
+if(($_SESSION['acceso']==no)||($_SESSION['acceso']!=yes))
+{
+    include("navBar/navbar.html");
+}else{
+    include("navBar/navbar-acces.html");
+}
+?> 
 <!-- logo y descripción -->
 <div class="container" id="logo-descripcion" >
     <div class="row justify-content-md-center">
