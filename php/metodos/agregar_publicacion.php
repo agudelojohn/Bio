@@ -23,7 +23,7 @@ $nombre_archivo=$_FILES['pdf_pub']['name'];
 
 if(!move_uploaded_file($_FILES['pdf_pub']['tmp_name'],$dir.$nombre_archivo)){ //pregunta si NO se movió el archivo
     echo "Error al subir el archivo<br>";
-    echo "<a href='../../add-publicacion.php'>Volver</a>";
+    echo "<a href='../../add-publication.php'>Volver</a>";
     exit;
 }
 $pdf="pdfs/".$nombre_archivo; //directorio que se guardará en la BD
@@ -37,7 +37,16 @@ $url=$_POST["url_pub"];
 $date=$_POST["date"];
 $sql="insert into publications(title, pdf_publication, img_publication, abstract, codigo, url, date_publication)
     values('".$title."','".$pdf."','".$image."','".$abstract."','".$code."','".$url."','".$date."')";
-    $ejecutar=mysqli_query($conexion,$sql);
+$ejecutar=mysqli_query($conexion,$sql);
+
+
+$sql2="select id_publication from publications where title='".$title."';";
+$resultado = mysqli_query($conexion, $sql2);
+$id_pub = $resultado->fetch_assoc(); //resultado de buscar la ID de la publicación
+
+$sql="insert into author(id_publication, id_people) values(".$id_pub['id_publication'].",".$author.")";
+// echo $sql;
+$ejecutar=mysqli_query($conexion,$sql);
     if($ejecutar!=0){
     header("Location:".$_SERVER['HTTP_REFERER']."?correcto=si");
     }else

@@ -117,38 +117,31 @@ echo '
                         <!-- profesion, cargo, departamento o estudios-->
                         ';
 // Ms(c) Systems Engineering <br>B.Sc, Systems Engineering<br>Tech. Web Development
-// hasta aquí el primer echo para poder colocar un while que muestre la lista de educación
-for($i = 0; $i <=4; $i++)
+// hasta aquí el primer echo para poder colocar un for que muestre la lista de educación
+for($i=0;$i<count($pieces);$i++)
 {
-    if(($pieces[$i]!=null)&&($pieces[$i]!="null"))
-        echo $pieces[$i].'<br>';
+    echo $pieces[$i].'<br>';
+}
 
-};
+
 echo'
+                    <br>
                     </div>
                     <div class="row d-info">
                         <!-- demás informacion -->
                         <div class="col col-lg-auto text-left" style="padding-left:0;">
                             <ul style=" list-style-type: none;" id="titles">
-                            <strong>';
-if(($contact_pieces[0]!=null)&&($contact_pieces!="null"))
-                                echo '<li>Email</li>';
-if(($contact_pieces[1]!=null)&&($contact_pieces!="null"))
-                                echo '<li>Email</li>';
-if(($contact_pieces[2]!=null)&&($contact_pieces!="null"))
-                                echo '<li>Tel</li>';
-echo '
+                            <strong><li>Email and Number</li>
                             </strong>
                             </ul>
                         </div>
+                        
                         <div class="col col-lg-auto">
                             <ul style=" list-style-type: none; margin-left:-40px;">';
-if(($contact_pieces[0]!=null)&&($contact_pieces!="null"))                            
-                                echo '<li>'.$contact_pieces[0].'</li>';
-if(($contact_pieces[1]!=null)&&($contact_pieces!="null"))                                
-                                echo '<li>'.$contact_pieces[1].'</li>';
-if(($contact_pieces[2]!=null)&&($contact_pieces!="null"))                  
-                                echo '<li>'.$contact_pieces[2].'</li>';              
+                            for($i=0;$i<count($contact_pieces);$i++)
+                            {
+                                echo '<li>'.$contact_pieces[$i].'</li>';
+                            }            
 echo'
                                 
                                 <li style="margin-top:10px;"><!-- Button trigger modal -->
@@ -189,19 +182,16 @@ echo'
                             <li>
                                 <strong>Education</strong> <br>';
 // hasta aquí el primer echo para poder colocar un while que muestre la lista de educación
-for($i = 0; $i <=4; $i++)
+for($i = 0; $i <count($pieces); $i++)
 {
-    if(($pieces[$i]!=null)&&($pieces[$i]!="null"))
         echo $pieces[$i].'<br>';
-
 };
 echo '
                             </li>
                             <li>
                                 <strong>Contact Info</strong><br>';
-for($i = 0; $i <=3; $i++){
-    if(($contact_pieces[$i]!=null)&&($contact_pieces[$i]!="null"))
-        echo $contact_pieces[i].'<br>';
+for($i = 0; $i <count($contact_pieces); $i++){
+        echo $contact_pieces[$i].'<br>';
 };
 echo '
                             </li>
@@ -235,7 +225,7 @@ echo '
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                //<button type="button" class="btn btn-primary">Save changes</button>
               </div>
             </div>
           </div>

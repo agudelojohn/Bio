@@ -62,7 +62,8 @@ if(isset($_SESSION['acceso']))
     </div>  
 </div>
 <!-- News -->
-
+<!-- La sección de News se almacena en la BD, cada elemento consta de Title, Date y URL, se muestras 
+únicamente los últimos cuatro registros, los más antiguos son descartados. -->
 <?PHP
 
 // desde aquí la conexión a la BD
@@ -91,6 +92,7 @@ if($cantidad['count(*)'] != 0){
                                 <div class="col col-lg-10" >
                                     <h1 class="display-4 display-news">'.$array['title'].'</h1>
                                     <p class="lead">'.$array['date_new'].'</p>
+                                    <p style="color:#20AE29;">'.$array['url'].'</p>
                                 </div>
                                 <div class="col col-lg-1 col-btn" >
                                     <a href="'.$array['url'].'" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
@@ -110,6 +112,7 @@ if($cantidad['count(*)'] != 0){
                             <div class="col col-lg-10" >
                                 <h1 class="display-4 display-news">'.$array['title'].'</h1>
                                 <p class="lead">'.$array['date_new'].'</p>
+                                <p style="color:#20AE29;">'.$array['url'].'</p>
                             </div>
                             <div class="col col-lg-1 col-btn" >
                                 <a href="'.$array['url'].'" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>

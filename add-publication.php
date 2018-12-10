@@ -51,6 +51,20 @@ if(isset($_SESSION['acceso']))
             <input type="text" class="form-control" name=title id="tile" aria-describedby="titleNew" placeholder="Enter title" maxlength=100>
             <small id="titleNew" class="form-text text-muted">Main title of each new</small>
         </div>
+        <div class="form-group">
+            <label for="author">Author</label><br>
+            <!-- select para incluir un autor en las publicaciones, se genera apartir de la busqueda en la BD -->
+            <select name="author" id="author">
+                <?php 
+                include("php/conexion.php");
+                $sql = mysqli_query($conexion, "select name, id_profile FROM people_profiles");
+                while ($row = $sql->fetch_assoc()){
+                echo "<option value=".$row['id_profile'].">" . $row['name'] . "</option>";
+                }
+                ?>
+            </select>
+            <small id="titleNew" class="form-text text-muted">Author of this publication</small>
+        </div>
         <label >PDF</label>
         <div class="custom-file" style="margin-bottom:30px;">        
             <input type="file" class="custom-file-input" id="pdf_pub" name="pdf_pub">

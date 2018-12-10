@@ -163,7 +163,7 @@ if(isset($_SESSION['acceso']))
                 <div class="card-body">
                     <h5 class="card-title">MACV</h5>
                     <h6 class="card-subtitle mb-2 text-muted">Motion Analysis and Computer Vision</h6>
-                    <p class="card-text"></p>
+                    <p class="card-text">Escuela de Ingeniería de Sistemas e Informática. at the Universidad Industrial de Santander</p>
                     <a href="https://uis-macv.github.io/" class="card-link ">More</a>
                 </div>
             </div>
