@@ -2,6 +2,7 @@ user: Jagudelo
 pass: Johnagudelo4124
 create database bivlab;
 
+
 create table people_profiles(
 
     id_profile int PRIMARY KEY AUTO_INCREMENT not null,
@@ -93,3 +94,4 @@ create table acceso(
     pass varchar(100));
     
  insert into acceso values('johnagudelo','g4m3s0fthr0n3s4124');
+select COUNT(*) from acceso where id='johnagudelo' and pass='g4m3s0fthr0n3s4124'

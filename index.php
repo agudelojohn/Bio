@@ -22,12 +22,18 @@ session_start();
 </head>
 <body> 
 <?php
-if(($_SESSION['acceso']==no)||($_SESSION['acceso']!=yes))
+// Esto muestra una navbar dependiendo del acceso que se tenga
+if(isset($_SESSION['acceso']))
 {
-    include("navBar/navbar.html");
+    if($_SESSION['acceso']=='yes')
+    {
+        include("navBar/navbar-acces.html");
+    }else{
+        include("navBar/navbar.html");
+    }
 }else{
-    include("navBar/navbar-acces.html");
-}
+    include("navBar/navbar.html");
+} 
 ?> 
 <!-- logo y descripción -->
 <div class="container" id="logo-descripcion" >

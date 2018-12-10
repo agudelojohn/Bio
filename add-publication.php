@@ -1,3 +1,6 @@
+<?PHP
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,7 +21,19 @@
 </head>
 <body>
 <?php
-include("navBar/navbar.html");
+// Esto muestra una navbar dependiendo del acceso que se tenga
+if(isset($_SESSION['acceso']))
+{
+    if($_SESSION['acceso']=='yes')
+    {
+        include("navBar/navbar-acces.html");
+    }else{
+        include("navBar/navbar.html");
+    }
+}else{
+    header("Location: index.php");
+    exit;
+} 
 ?>    
 <div class="row justify-content-md-center" style="margin-top:20px;"> <!-- row to keep know where are you -->
             <div class="col col-lg-11" > 

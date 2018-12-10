@@ -1,7 +1,7 @@
 <?PHP
   session_start();
-  unset($_SESSION["clave"]); 
+  unset($_SESSION["acceso"]); 
   session_destroy();
-  header("Location: ../index.php");
+  header("Location: ../access.php");
   exit;
 ?>

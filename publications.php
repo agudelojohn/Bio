@@ -1,3 +1,6 @@
+<?PHP
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -18,7 +21,18 @@
 </head>
 <body>
 <?php
-include("navBar/navbar.html");
+// Esto muestra una navbar dependiendo del acceso que se tenga
+if(isset($_SESSION['acceso']))
+{
+    if($_SESSION['acceso']=='yes')
+    {
+        include("navBar/navbar-acces.html");
+    }else{
+        include("navBar/navbar.html");
+    }
+}else{
+    include("navBar/navbar.html");
+} 
 ?>    
 <div class="container">
     <ul id=lista-de-publicaciones>
