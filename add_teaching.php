@@ -77,8 +77,66 @@ if(isset($_SESSION['acceso']))
     </div>
     <div class="form-group">
         <label for="schedule">Schedule</label>
-        <input type="text" class="form-control" name=schedule id="schedule" aria-describedby="titleNew" placeholder="Enter title" maxlength=100>
-        <!-- <small id="titleNew" class="form-text text-muted">Main title of each new</small> -->
+        <!-- <input type="text" class="form-control" name=schedule id="schedule" aria-describedby="titleNew" placeholder="Enter title" maxlength=100> -->
+        <div class=container>
+                <?php
+                $dias_semana=array("Monday","Tuesday","Wednesday","Thursday","Friday","Saturday");
+                foreach($dias_semana as $dia)
+                {
+                    echo'
+                        <div class="row justify-content-center" style="border-bottom:1px solid grey;">                    
+                            <div class="col col-lg-2">
+                                <strong><label for="'.$dia.'_start">'.$dia.':  </label></strong>
+                            </div>
+                            <div class="col col-lg-1">
+                                From:
+                            </div>
+                            <div class="col col-lg-2">
+                                <select name="'.$dia.'_start" id="'.$dia.'_start">
+                                    <option value="none" selected>--None--</option>
+                                    <option value="06:00">06:00</option>
+                                    <option value="07:00">07:00</option>
+                                    <option value="08:00">08:00</option>
+                                    <option value="09:00">09:00</option>
+                                    <option value="10:00">10:00</option>
+                                    <option value="11:00">11:00</option>
+                                    <option value="12:00">12:00</option>
+                                    <option value="13:00">13:00</option>
+                                    <option value="14:00">14:00</option>
+                                    <option value="15:00">15:00</option>
+                                    <option value="16:00">16:00</option>
+                                    <option value="17:00">17:00</option>
+                                    <option value="18:00">18:00</option>
+                                    <option value="19:00">19:00</option>
+                                </select>                            
+                            </div>
+                            <div class="col col-lg-1">
+                                To:
+                            </div>
+                            <div class="col col-lg-2">
+                                <select name="'.$dia.'_end" id="'.$dia.'_end">
+                                <option value="none" selected>--None--</option>
+                                <option value="06:00">06:00</option>
+                                <option value="07:00">07:00</option>
+                                <option value="08:00">08:00</option>
+                                <option value="09:00">09:00</option>
+                                <option value="10:00">10:00</option>
+                                <option value="11:00">11:00</option>
+                                <option value="12:00">12:00</option>
+                                <option value="13:00">13:00</option>
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:00">19:00</option>
+                                </select>                            
+                            </div>
+                        </div>';
+                }
+                ?>
+        </div>
+        
     </div>
     <div class="form-group">
             <label for="location">Location</label><br>

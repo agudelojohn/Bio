@@ -60,7 +60,7 @@ create table clases(
 create table dictar_clase(
 	id_profesor int not null,
 	id_clase int not null, 
-	horario varchar(300),
+	horario varchar(200),
 	edificio varchar(5),
 	aula varchar(5),
 	CONSTRAINT id_pro FOREIGN KEY (id_profesor) REFERENCES people_profiles(id_profile),

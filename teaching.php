@@ -74,10 +74,10 @@ while($array=mysqli_fetch_array($resultado)){
                 <div class="col col-lg-3" > 
                     <strong><p>'.$array['name'].'</p></strong>
                 </div>
-                <div class="col col-lg-3" > 
+                <div class="col col-lg-5" > 
                     <p>'.$array['horario'].'</p>
                 </div>
-                <div class="col col-lg-3" > 
+                <div class="col col-lg-1" > 
                     <p>'.$array['edificio'].' - '.$array['aula'].'</p>
                 </div>
             </div>
