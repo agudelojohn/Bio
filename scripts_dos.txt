@@ -70,7 +70,7 @@ create table dictar_clase(
 
 create table edificios(
     id_edificios int PRIMARY KEY AUTO_INCREMENT,
-    nombre varchar(5)
+    nombre varchar(6)
     );
 
 #select * from people_profiles join clases on clases.profesor=people_profiles.id_profile;
