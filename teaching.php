@@ -49,27 +49,39 @@ if(isset($_SESSION['acceso']))
 // desde aquí la conexión a la BD
 require("php/conexion.php");
 // sentencia
-$sql="select * from people_profiles join clases on clases.profesor=people_profiles.id_profile;";
+$sql="select nombre_clase, name, horario, edificio, aula from people_profiles join dictar_clase join clases on dictar_clase.id_profesor=people_profiles.id_profile and clases.id_clase=dictar_clase.id_clase order by id_profile;";
 // query para mandar la sentencia
 $resultado = mysqli_query($conexion,$sql);
 // toma los datos en un array
+$titulo="vacío";
 while($array=mysqli_fetch_array($resultado)){
+    if($titulo!=$array['nombre_clase'])
+        {
+            $titulo=$array['nombre_clase'];
+            echo '
+            <div class="container">
+                <div class="row ">
+                    <div class="col col-lg-auto" > 
+                        <h2>'.$titulo.'</h2>
+                    </div>
+                </div>
+            </div>';
+        }
     echo '
-    <div class="container">
-        <div class="row ">
-            <div class="col col-lg-4" > 
-                <img src="'.$array['img_profile'].'" style="width:100%;">
+        <div class="container">
+            <div class="row justify-content-md-start">
+                <div class="col col-lg-3" ></div>
+                <div class="col col-lg-3" > 
+                    <strong><p>'.$array['name'].'</p></strong>
+                </div>
+                <div class="col col-lg-3" > 
+                    <p>'.$array['horario'].'</p>
+                </div>
+                <div class="col col-lg-3" > 
+                    <p>'.$array['edificio'].' - '.$array['aula'].'</p>
+                </div>
             </div>
-            <div class="col col-lg-auto" > 
-                <h1><strong>'.$array['name'].'</strong></h1><br>
-                <p>
-                    <strong>'.$array['nombre_clase'].'</strong><br>
-                    '.$array['descripcion'].'<br>'.$array['aula'].'<br>
-                    '.$array['horario'].'
-                </p>
-            </div>
-        </div>
-    </div>';
+        </div>';
 }
 ?>
 
