@@ -54,12 +54,18 @@ insert into author value('2','2');
 create table clases(
     id_clase int PRIMARY KEY AUTO_INCREMENT not null,
     nombre_clase varchar(50) not null,
-    descripcion varchar(200) not null,
-    aula varchar(7) not null,
-    horario varchar(100),
-    profesor int,
-    CONSTRAINT id_encargado FOREIGN KEY (profesor) REFERENCES people_profiles(id_profile)
+    descripcion varchar(200)
     );
+
+create table dictar_clase(
+	id_profesor int not null,
+	id_clase int not null, 
+	horario varchar(300),
+	edificio varchar(5),
+	aula varchar(5),
+	CONSTRAINT id_pro FOREIGN KEY (id_profesor) REFERENCES people_profiles(id_profile),
+	CONSTRAINT id_class FOREIGN KEY (id_clase) REFERENCES clases(id_clase)
+);
 
 
 create table edificios(
