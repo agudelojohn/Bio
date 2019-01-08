@@ -99,5 +99,18 @@ create table acceso(
     id varchar(100),
     pass varchar(100));
     
+create table datasets(
+	id_dataset int PRIMARY KEY AUTO_INCREMENT,
+	nombre_dataset varchar(100) not null,
+	location_dataset varchar(100) not null
+);
+
+create table codes(
+	id_code int PRIMARY KEY AUTO_INCREMENT,
+	nombre_code varchar(100) not null,
+	url_code varchar(100) not null
+);
+	
+	
  insert into acceso values('johnagudelo','g4m3s0fthr0n3s4124');
 select COUNT(*) from acceso where id='johnagudelo' and pass='g4m3s0fthr0n3s4124'

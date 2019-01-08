@@ -17,7 +17,26 @@ session_start();
     <link rel="stylesheet" type="text/css" href="navBar/navBar.css">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
- 
+    <script>
+    function over(x){
+        x.src="datasets/icon2.png";
+    }
+
+    function leave(x){
+        x.src="datasets/icon.png";
+    }
+    function bigImg(x) {
+    x.style.height = "64px";
+    x.style.width = "64px";
+    }
+
+    function normalImg(x) {
+    x.style.height = "42px";
+    x.style.width = "42px";
+    }
+    
+
+    </script>
 </head>
 <body>
 <?php
@@ -33,13 +52,71 @@ if(isset($_SESSION['acceso']))
 }else{
     include("navBar/navbar.html");
 } 
-?>    
-
-<img src="imgs/Internas/construccion.jpg" alt="" style="width:100%;">
 
 
+// desde aquí la conexión a la BD
+require("php/conexion.php");
+// sentencia
+$sql="Select*from datasets order by nombre_dataset;";
+// query para mandar la sentencia
+$resultado = mysqli_query($conexion,$sql);
+// toma los datos en un array
+echo '<div class="row justify-content-md-center" style="margin-top:20px;"> <!-- row to keep know where are you -->
+<div class="col col-lg-10" > 
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page"><a href="">Datasets</a></li>
+        </ol>
+    </nav>
+</div>
+</div>';
 
+while($array=mysqli_fetch_array($resultado)){
+    echo ' 
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <p>'.$array['nombre_dataset'].'</p>
+            </div>
+            <div class="col-6">
+                <a href="'.$array['location_dataset'].'" download><img id=imagen onmouseover="over(this)" onmouseout="leave(this)" src="datasets/icon.png" height="42" width="42"></a>
+            </div>
+        </div>
+    </div>';
+}
+?>
+
+<div class="row justify-content-md-center" style="margin-top:20px;"> <!-- row to keep know where are you -->
+<div class="col col-lg-10" > 
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page"><a href="">Codes</a></li>
+        </ol>
+    </nav>
+</div>
+</div>
 <?php
+// sentencia
+$sql="Select*from codes order by nombre_code;";
+// query para mandar la sentencia
+$resultado = mysqli_query($conexion,$sql);
+// toma los datos en un array
+
+while($array=mysqli_fetch_array($resultado)){
+    echo ' 
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <p>'.$array['nombre_code'].'</p>
+            </div>
+            <div class="col-6">
+                <a href="'.$array['url_code'].'" target="_blank"><img id=imagen onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="datasets/external.png" style="height:42px; width:42px;"></a>
+            </div>
+        </div>
+    </div>';
+}
+
+
 include("navBar/footer.html");
 ?>    
 </div>
