@@ -17,11 +17,7 @@ session_start();
     <link rel="stylesheet" type="text/css" href="navBar/navBar.css">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <script type="text/javascript">
-        function show_modal(){
-            $('#myModal').modal('show');
-        });
-    </script>
+    <script src="js/validaciones.js"></script>
 </head>
 <body>
 <?php
@@ -51,21 +47,37 @@ if(isset($_SESSION['acceso']))
             <div class="col col-lg-11" > 
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item active" aria-current="page"><a href="ryt.php">Add Dataset</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="ryt.php">Add Code</a></li>
                     </ol>
                 </nav>
             </div>
 </div>
 <div class=container>
-    <form method="post" action="php/metodos/agregar_code.php" enctype="multipart/form-data">
+    <!-- <form method="post" action="php/metodos/agregar_code.php" enctype="multipart/form-data" onsubmit="return validar_code();">
         <div class="form-group">
             <label for="title">Title or Name</label>
-            <input type="text" class="form-control" name=name id="name" aria-describedby="titleNew" placeholder="Enter title" maxlength=100>
+            <input type="text" class="form-control" name=name_code id="name_code" aria-describedby="titleNew" placeholder="Enter title" maxlength=100 required>
             <small id="titleNew" class="form-text text-muted">Main title of each code</small>
         </div>
         <div class="form-group">
             <label for="title">URL</label>
-            <input type="text" class="form-control" name=url_code id="url_code" aria-describedby="titleNew" placeholder="Enter url" maxlength=100>
+            <input type="text" class="form-control" name=url_code id="url_code" aria-describedby="titleNew" placeholder="Enter url" maxlength=100 required>
+            <small id="titleNew" class="form-text text-muted">Link to code</small>
+        </div>
+        
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="reset" class="btn btn-primary" value="Reset" style="margin-left:20px;">Reset</button>
+    </form> -->
+    <form method="post" action="php/metodos/agregar_code.php" enctype="multipart/form-data" onsubmit="return validar_code();">
+        <div class="form-group">
+            <label for="title">Title or Name</label>
+            <input type="text" class="form-control" name=name_code id="name_code" aria-describedby="titleNew" placeholder="Enter title" maxlength=100 >
+            <small id="titleNew" class="form-text text-muted">Main title of each code</small>
+        </div>
+        <div class="form-group">
+            <label for="title">URL</label>
+            <input type="text" class="form-control" name=url_code id="url_code" aria-describedby="titleNew" placeholder="Enter url" maxlength=100 >
             <small id="titleNew" class="form-text text-muted">Link to code</small>
         </div>
         

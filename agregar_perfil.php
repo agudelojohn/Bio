@@ -39,7 +39,7 @@ if(isset($_SESSION['acceso']))
             <div class="col col-lg-11" > 
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item active" aria-current="page"><a href="ryt.php">Add profile</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><a href="ryt.php">Add Profile</a></li>
                     </ol>
                 </nav>
             </div>
