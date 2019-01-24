@@ -1,0 +1,32 @@
+insert into people_profiles(id_profile, name,img_profile,education,contact,resum) values(1, 'GUSTAVO GARZon','imgs/profiles/gustavo.jpg','Ms(c) Systems Engineering B.Sc;Systems Engineering Tech.; Web Development','gustavo.garzon@saber.uis.edu.co;gustavogarzonuis@gmail.com','Gustavo Garzón is currently a candidate for Master in Systems Engineering and Informatics at Universidad Industrial de Santander (Colombia). His research interests include: action recognition, pattern recognition, computer vision, motion analysis, image processing and machine learning. He works at BIVLab as Research Assistant and helps with student advising on computer vision related areas.');
+insert into people_profiles(id_profile,name,img_profile,education,contact,resum) values(2, 'JEFFERSON RODRÍGUEZ', 'imgs/profiles/jefferson.jpg','Ms(c) Systems Engineering B.Sc; Systems Engineering','contact.me@jeffersonrodriguez.co;jefferson.rodriguez2@saber.uis.edu.co','I’m from Bucaramanga in Colombia. Passionate about computer vision, technology, travel, football and cycling. Currently, I’m a Master’s student in Computer Science and I work at Biomedical imaging, Vision and Learning Laboratoy (BivLab).');
+insert into people_profiles(name,img_profile,education,contact,resum) values( 'ISAIL SALAZAR', 'imgs/profiles/isail.jpg','Ms(c) Systems Engineering B.Sc;Electronic Engineering','isail.salazar@saber.uis.edu.co;isail1995@hotmail.com',"Isail Salazar is currently a candidate for Master in Systems Engineering and Informatics at Universidad Industrial de Santander (Colombia), where he's associated at Biomedical Imaging, Vision and Learning Laboratory (BIVLab) and Motion Analysis and Computer Vision (MACV) collective. His research work has been focused mainly in image segmentation, RGB-D image processing, eye movement analysis and motion magnification.");
+
+insert into publications(id_publication,title,img_publication,abstract,date_publication,pdf_publication) values(1,'A local Poisson-salient point representation to efficiently characterize human actions.','imgs/publications/brain.png','A local Poisson-salient point representation to efficiently characterize human actions.','2018-01-01','pdfs/pdf_uno.pdf');
+insert into publications(id_publication,title,img_publication,abstract,date_publication,pdf_publication) values(2,'Frame-Level Covariance Descriptor for Action Recognition.','imgs/publications/cat.jpg','Frame-Level Covariance Descriptor for Action Recognition.','2017-01-01','pdfs/pdf_dos.pdf');
+insert into author values('1','1');
+insert into author value('2','2');
+
+
+insert into news(counter, title, date_new, content, img_news) values(1,'Participation at 13th Colombian Conference on Computing (13CCC 2018)','2018-10-03','We’re pleased to announce the participation of our members Wilson Moreno (Systems Engineer) and Jefferson Rodriguez (MsC. Student) at 13th Colombian Conference on Computing (13CCC 2018), which took place in september 26-28, 2018 at Cartagena (Colombia). 
+
+The Colombian Conference on Computing is an annual gathering organized by the Colombian Computer Society (www.sco2.org). It aims to promote and strengthen the Colombian community in computer science, bringing researchers, students and practitioners, both national and international. 
+
+More info on 13th Colombian Conference on Computing (13CCC 2018): http://www.utb.edu.co/13ccc','imgs/news/13ccc-2018-macv.jpg');
+
+insert into news(counter, title, date_new, content, img_news) values(2,'Participation at IEEE International Symposium on Biomedical Imaging (ISBI 2018)','2018-04-07','We’re pleased to announce the participation of our members Jean Pico (Electronics Engineering student) and Fabio Martínez (Professor) at IEEE International Symposium on Biomedical Imaging (ISBI 2018), which took place in april 4-7, 2018 at Washington D.C. 
+
+This event is a scientific conference dedicated to mathematical, algorithmic, and computational aspects of biological and biomedical imaging, fostering knowledge transfer among different imaging communities and contributing to an integrative approach to biomedical imaging. 
+
+More info on IEEE International Symposium on Biomedical Imaging (ISBI 2018): https://biomedicalimaging.org/2018/','imgs/news/jean-isbi2018.jpg');
+insert into news(counter, title, date_new, content, img_news) values(3,'Punto Vive Digital: now open 24h Mon-Fri','2017-10-26','Now introducing the first Punto Vive Digital in Colombia with 24h monday-to-friday service!
+Enjoy rooms with cutting-edge computers and internet access, xbox gaming spots, media production studio, certified short courses and more.
+Visit us!: Carrera 27 Calle 10, Instituto Tecnológico Dámaso Zapata (Glorieta caballo de Bolivar entrance). 
+
+Sponsors: Alcaldía de Bucaramanga, Universidad Industrial de Santander ','imgs/news/vive-digital.jpg');
+
+insert into clases(nombre_clase,descripcion) values('Discretas', 'Materia dedicada a la busqueda del saber en la matemática');
+
+insert into dictar_clase(id_profesor, id_clase, horario, edificio, aula) values(2,2,' Monday: 06:00-10:00 Wednesday: 08:00-09:00 Friday: 17:00-19:00 ','II','401');
+
+insert into codes(nombre_code, url_code) values('Codigo uno', 'www.google.com');

@@ -71,7 +71,8 @@ create table news(
 	counter int,
 	title varchar(100),
 	date_new date,
-	url varchar(200)
+	content varchar(1000),
+	img_news varchar(100)
 );
 
 

@@ -18,7 +18,12 @@ session_start();
     <link rel="stylesheet" type="text/css" href="navBar/navBar.css">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
- 
+ <style>
+ .btn-news:hover{
+background-color: #20AE29 !important;
+/* border: 4px solid #682DCA !important; */
+ }
+ </style>
 </head>
 <body> 
 <?php
@@ -92,10 +97,9 @@ if($cantidad['count(*)'] != 0){
                                 <div class="col col-lg-10" >
                                     <h1 class="display-4 display-news">'.$array['title'].'</h1>
                                     <p class="lead">'.$array['date_new'].'</p>
-                                    <p style="color:#20AE29;">'.$array['url'].'</p>
                                 </div>
-                                <div class="col col-lg-1 col-btn" >
-                                    <a href="'.$array['url'].'" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
+                                <div class="col col-lg-1 col-btn " >
+                                    <a href="allnews.html" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">&ltGo&gt</a>
                                 </div> 
                             </div>
                         </div>
@@ -112,10 +116,9 @@ if($cantidad['count(*)'] != 0){
                             <div class="col col-lg-10" >
                                 <h1 class="display-4 display-news">'.$array['title'].'</h1>
                                 <p class="lead">'.$array['date_new'].'</p>
-                                <p style="color:#20AE29;">'.$array['url'].'</p>
                             </div>
                             <div class="col col-lg-1 col-btn" >
-                                <a href="'.$array['url'].'" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">></a>
+                            <a href="allnews.html" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">&ltGo&gt</a>
                             </div> 
                         </div>
                     </div>

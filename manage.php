@@ -58,9 +58,8 @@ if(isset($_SESSION['acceso']))
         <small id="dateNew" class="form-text text-muted">Date that will be show up</small>
     </div>
     <div class="form-group">
-        <label for="url">Url</label>
-        <input type="text" class="form-control" name=url id="url" aria-describedby="urlNew" placeholder="Enter url to reach it"  maxlength=200>
-        <small id="urlNew" class="form-text text-muted">Url to see the complete new</small>
+            <label for="content">Content</label>
+            <textarea class="form-control" id="content" name=content rows="3" placeholder="Please enter details about this new"  maxlength=1000></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
     <button type="reset" class="btn btn-primary" value="Reset" style="margin-left:20px;">Reset</button>
