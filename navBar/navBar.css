@@ -8,19 +8,18 @@
   }
   footer a{
     font-style: none;
-    color:white;
-    /* color:black; */
+    color:white !important;
   }
   footer a:hover{
     color: #554DA2;
   }
 
     .navbar,.dropdown-menu{
-        background-color:#20AE29;
+        background-color:#20AE29 !important;
         
     }
     .navbar a{
-        color:white;
+        color:white  !important;
     }
     .navbar a:hover{
         color:#554DA2;

@@ -21,7 +21,7 @@ session_start();
  <style>
  .btn-news:hover{
 background-color: #20AE29 !important;
-/* border: 4px solid #682DCA !important; */
+border-color: #20AE29 !important;
  }
  </style>
 </head>
@@ -99,7 +99,7 @@ if($cantidad['count(*)'] != 0){
                                     <p class="lead">'.$array['date_new'].'</p>
                                 </div>
                                 <div class="col col-lg-1 col-btn " >
-                                    <a href="allnews.html" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">&ltGo&gt</a>
+                                    <a href="allnews.php" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;padding-right:0px;padding-left:0px;" >&ltGo&gt</a>
                                 </div> 
                             </div>
                         </div>
@@ -118,7 +118,7 @@ if($cantidad['count(*)'] != 0){
                                 <p class="lead">'.$array['date_new'].'</p>
                             </div>
                             <div class="col col-lg-1 col-btn" >
-                            <a href="allnews.html" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;">&ltGo&gt</a>
+                            <a href="allnews.php" class="btn btn-primary btn-lg active btn-news" role="button" aria-pressed="true" style="padding-top:40px;padding-right:0px;padding-left:0px;">&ltGo&gt</a>
                             </div> 
                         </div>
                     </div>
@@ -154,4 +154,4 @@ include("navBar/footer.html");
 <script src="Bjs/bootstrap.min.js"></script>
 </body>
 </html>
-<script>$('#example').tooltip(options)</script>
+<!-- <script>$('#example').tooltip(options)</script> -->
