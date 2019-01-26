@@ -1,5 +1,20 @@
 <?PHP
 session_start();
+$comilla="'";
+if(isset($_GET['eliminacionCorrecta']))
+{
+    echo'<script type="text/javascript">
+    alert("Deleted rightly");
+    window.location.href="people.php";
+    </script>';
+}
+if(isset($_GET['erroralEliminar']))
+{
+    echo'<script type="text/javascript">
+    alert("Error deleting, couldn'.$comilla.'t be completed");
+    window.location.href="people.php";
+    </script>';
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -17,6 +32,12 @@ session_start();
     <link rel="stylesheet" type="text/css" href="navBar/navBar.css">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script>
+        function alertar()
+        {
+            return confirm("Are you sure to delete this profile?");
+        }
+    </script>
  <style>
  @media (min-width: 576px) {
 
@@ -24,6 +45,10 @@ session_start();
     max-width: 700px !important;
 }
 
+}
+input, textarea{
+    width:100%;
+    height:100% !important;
 }
  </style>
 </head>
@@ -41,6 +66,8 @@ if(isset($_SESSION['acceso']))
 }else{
     include("navBar/navbar.html");
 } 
+
+
 ?>    
 
 
@@ -147,7 +174,22 @@ echo'
                                 <li style="margin-top:10px;"><!-- Button trigger modal -->
                                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-'.$array['id_profile'].'">
                                     Complete profile
-                                    </button>
+                                    </button>';
+if(isset($_SESSION['acceso']))
+{
+    if($_SESSION['acceso']=='yes')
+    {
+        echo '<button type="button" class="btn btn-warning" style="margin-left:20px;"data-toggle="modal" data-target="#modal-'.$array['id_profile'].'-modify">
+        Modify
+        </button>';
+        echo "<form method='post' action='php/metodos/eliminar_perfil.php' onsubmit='return alertar();'>
+            <input type=text value=".$array['id_profile']." name=idprofile id=idprofile style='display:none;'>
+            <input type='submit' value='Delete' class='btn btn-danger' style='margin-top:10px;'>
+            </form>";
+    }                
+}
+
+echo '
                                 </li>
                             </ul>
                             
@@ -208,7 +250,7 @@ echo '
                 <div class="col col-lg-10">
                     <h3>Publications</h3>
                     <ul>';
-$sql_dos="SELECT * FROM people_profiles JOIN author JOIN publications on people_profiles.id_profile=author.id_people and author.id_publication=publications.id_publication where people_profiles.id_profile='$array[id_profile]'";
+$sql_dos="SELECT title, abstract FROM people_profiles JOIN author JOIN publications on people_profiles.id_profile=author.id_people and author.id_publication=publications.id_publication where people_profiles.id_profile='$array[id_profile]'";
 // query para mandar la sentencia
 $resultado2 = mysqli_query($conexion,$sql_dos);
 // toma los datos en un array
@@ -229,6 +271,57 @@ echo '
             </div>
           </div>
         </div>
+        <!--finish modal-->
+
+
+        <!-- Modal MODIFY-->
+        <div class="modal fade" id="modal-'.$array['id_profile'].'-modify" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modify</h5>
+                </div>
+              <div class="modal-body">
+                <div class="row justify-content-center">
+                    <div class="col col-lg-4">
+                        <img class="img-profile " src="'.$array['img_profile'].'" alt="">
+                    </div>
+                    <div class="col col-lg-8">
+                        <form method="post" action="php/metodos/modificar_perfil.php" enctype="multipart/form-data">
+                            <input type=text value="'.$array['id_profile'].'" disabled><br>
+                            Name:<br>
+                            <input type=text value="'.$array['name'].'"><br>
+                            Profile'.$comilla.'s image:<br>
+                            <input type=text value="'.$array['img_profile'].'"><br>
+                            Education:<br>
+                            <input type=text value="'.$array['education'].'"><br>
+                            Contact:<br>
+                            <input type=text value="'.$array['contact'].'"><br>
+                            Resum:<br>
+                            <textarea>'.$array['resum'].'</textarea><br>
+                            Publications:<br>
+                            <textarea disabled>';
+                            $sql_dos="SELECT title FROM people_profiles JOIN author JOIN publications on people_profiles.id_profile=author.id_people and author.id_publication=publications.id_publication where people_profiles.id_profile='$array[id_profile]'";
+                            // query para mandar la sentencia
+                            $resultado2 = mysqli_query($conexion,$sql_dos);
+                            // toma los datos en un array
+                                while($array_dos=mysqli_fetch_array($resultado2)){
+                                echo $array_dos['title'];
+                                }
+                            echo'</textarea><br>
+                            <button type="submit" class="btn btn-primary">Update</button>
+                            <button type="reset" class="btn btn-primary" value="Reset" style="margin-left:20px;">Reset</button>
+                        </form>
+                    </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--finish modal-->
 ';
 }
 // echo '<br><br>';

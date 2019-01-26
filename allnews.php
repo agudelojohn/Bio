@@ -65,7 +65,7 @@ echo '
             <div class="row justify-content-md-center ">
                 <div class="col col-lg-12 " align=center>
                 <!-- aqui va la imagen -->
-                    <img class="img_new" src="'.$img.'" alt="" style="height:100%;">
+                    <img class="img_new" src="'.$img.'" alt="" style="height:100%; border-radius:15px; border:3px solid grey;">
                 </div>
             </div>
             <div class="row justify-content-md-center ">
@@ -93,8 +93,8 @@ echo '
         
         
         <!-- Modal -->
-        <div class="modal fade" id="modal-'.$date.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-          <div class="modal-dialog" role="document">
+        <div class="modal fade bd-example-modal-lg" id="modal-'.$date.'" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <h3 class="modal-title" id="exampleModalLongTitle">'.$title.'</h3>
