@@ -2,56 +2,54 @@
 include("../conexion.php");
 extract($_POST);
 
-if($_FILES['img_pub']['size']>10000000){
-    echo "Solo se permiten archivos menores a 10MB<br>";
-    echo "<a href='agregar_publicacion.php'>Volver</a>";
-    exit;
-}
+// if($_FILES['img_pub']['size']>10000000){
+//     echo "Solo se permiten archivos menores a 10MB<br>";
+//     echo "<a href='agregar_publicacion.php'>Volver</a>";
+//     exit;
+// }
 
-$dir="../../imgs/publications/";
-$nombre_archivo=$_FILES['img_pub']['name'];
+// $dir="../../imgs/publications/";
+// $nombre_archivo=$_FILES['img_pub']['name'];
 
-if(!move_uploaded_file($_FILES['img_pub']['tmp_name'],$dir.$nombre_archivo)){ //pregunta si NO se movió el archivo
-    echo "Error al subir el archivo<br>";
-    echo "<a href='../../add-publicacion.php'>Volver</a>";
-    exit;
-}
-$image="imgs/publications/".$nombre_archivo; //directorio que se guardará en la BD
+// if(!move_uploaded_file($_FILES['img_pub']['tmp_name'],$dir.$nombre_archivo)){ //pregunta si NO se movió el archivo
+//     echo "Error al subir el archivo<br>";
+//     echo "<a href='../../add-publication.php'>Volver</a>";
+//     exit;
+// }
+// $image="imgs/publications/".$nombre_archivo; //directorio que se guardará en la BD
 
-$dir="../../pdfs/";
-$nombre_archivo=$_FILES['pdf_pub']['name'];
+// $dir="../../pdfs/";
+// $nombre_archivo=$_FILES['pdf_pub']['name'];
 
-if(!move_uploaded_file($_FILES['pdf_pub']['tmp_name'],$dir.$nombre_archivo)){ //pregunta si NO se movió el archivo
-    echo "Error al subir el archivo<br>";
-    echo "<a href='../../add-publication.php'>Volver</a>";
-    exit;
-}
-$pdf="pdfs/".$nombre_archivo; //directorio que se guardará en la BD
+// if(!move_uploaded_file($_FILES['pdf_pub']['tmp_name'],$dir.$nombre_archivo)){ //pregunta si NO se movió el archivo
+//     echo "Error al subir el archivo<br>";
+//     echo "<a href='../../add-publication.php'>Volver</a>";
+//     exit;
+// }
+// $pdf="pdfs/".$nombre_archivo; //directorio que se guardará en la BD
 
-$title=$_POST["title"];
-// $pdf
-// $image
-$abstract=$_POST["abstract"];
-$code=$_POST["code"];
-$url=$_POST["url_pub"];
-$date=$_POST["date"];
-$sql="insert into publications(title, pdf_publication, img_publication, abstract, codigo, url, date_publication)
-    values('".$title."','".$pdf."','".$image."','".$abstract."','".$code."','".$url."','".$date."')";
-$ejecutar=mysqli_query($conexion,$sql);
+// $title=$_POST["title"];
+// $abstract=$_POST["abstract"];
+// $code=$_POST["code"];
+// $url=$_POST["url_pub"];
+// $date=$_POST["date"];
+// $sql="insert into publications(title, pdf_publication, img_publication, abstract, codigo, url, date_publication)
+//     values('".$title."','".$pdf."','".$image."','".$abstract."','".$code."','".$url."','".$date."')";
+// $ejecutar=mysqli_query($conexion,$sql);
 
 
-$sql2="select id_publication from publications where title='".$title."';";
-$resultado = mysqli_query($conexion, $sql2);
-$id_pub = $resultado->fetch_assoc(); //resultado de buscar la ID de la publicación
+// $sql2="select id_publication from publications where title='".$title."';";
+// $resultado = mysqli_query($conexion, $sql2);
+// $id_pub = $resultado->fetch_assoc(); //resultado de buscar la ID de la publicación
 
-$sql="insert into author(id_publication, id_people) values(".$id_pub['id_publication'].",".$author.")";
-// echo $sql;
-$ejecutar=mysqli_query($conexion,$sql);
-    if($ejecutar!=0){
-    header("Location:".$_SERVER['HTTP_REFERER']."?correcto=si");
-    }else
-    {
-        header("Location:".$_SERVER['HTTP_REFERER']."?errorCarga");;
-    }
+// $sql="insert into author(id_publication, id_people) values(".$id_pub['id_publication'].",".$author.")";
+
+// $ejecutar=mysqli_query($conexion,$sql);
+//     if($ejecutar!=0){
+//     header("Location:".$_SERVER['HTTP_REFERER']."?correcto=si");
+//     }else
+//     {
+//         header("Location:".$_SERVER['HTTP_REFERER']."?errorCarga");;
+//     }
 
 ?>

@@ -1,0 +1,24 @@
+<script>
+function abc()
+{
+
+ var x=document.getElementById('Select1').value;
+var newDiv=document.createElement('div');
+var html = '<select id="d2">';
+ for(i = x; i < 47; i++) {
+   html += "<option value='"+i+"'>"+i+"          </option>";
+   }
+   html += '</select>';
+  newDiv.innerHTML= html;
+             document.getElementById('drop').appendChild(newDiv);
+   }
+</script>
+
+
+
+  <select id='Select1' onchange='abc()'>
+  <option value='1'>1</option>
+  <option value='1'>2</option>
+  <option value='1'>3</option>
+  <option value='1'>4</option>
+  <div id ='drop'></div>

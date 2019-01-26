@@ -20,6 +20,42 @@ session_start();
  
 </head>
 <body>
+<!-- parte necesaria para crear los dropdown de los autores -->
+<?php 
+                include("php/conexion.php");
+                $sql = mysqli_query($conexion, "select name, id_profile FROM people_profiles");
+                while ($row = $sql->fetch_assoc()){
+                    $_NOMBRES[]=$row['name'];
+                    // array_push($_NOMBRES[],$row['name']);
+                    $_IDS[]=$row['id_profile'];
+                }
+?>
+<script>
+
+
+function dateGenerate() {
+   var date = new Date(), dateArray = new Array(), i;
+   curYear = date.getFullYear();
+    for(i = 0; i<5; i++) {
+        dateArray[i] = curYear+i;
+    }
+    return dateArray;
+}
+
+function addSelect(divname) {
+   var arraynames =<?php echo json_encode($_NOMBRES); ?>;
+   var arrayids=<?php echo json_encode($_IDS); ?>;
+   var newDiv=document.createElement('div');
+   var html = '<select style="margin-bottom:10px;" name="author-''">', dates = dateGenerate(), i;
+   for(i = 0; i < arraynames.length; i++) {
+       html += "<option value='"+arrayids[i]+"'>"+arraynames[i]+"</option>";
+   }
+   html += '</select>';
+   newDiv.innerHTML= html;
+   document.getElementById(divname).appendChild(newDiv);
+}
+</script>
+<!-- hasta aquí lo delos autores -->
 <?php
 // Esto muestra una navbar dependiendo del acceso que se tenga
 if(isset($_SESSION['acceso']))
@@ -54,15 +90,11 @@ if(isset($_SESSION['acceso']))
         <div class="form-group">
             <label for="author">Author</label><br>
             <!-- select para incluir un autor en las publicaciones, se genera apartir de la busqueda en la BD -->
-            <select name="author" id="author">
-                <?php 
-                include("php/conexion.php");
-                $sql = mysqli_query($conexion, "select name, id_profile FROM people_profiles");
-                while ($row = $sql->fetch_assoc()){
-                echo "<option value=".$row['id_profile'].">" . $row['name'] . "</option>";
-                }
-                ?>
-            </select>
+            <div name=author>
+                <div id="select-container">
+                </div>
+                <button type=button class="btn btn-success" id="add" onclick="addSelect('select-container');">Add Author</button>
+            </div>
             <small id="titleNew" class="form-text text-muted">Author of this publication</small>
         </div>
         <label >PDF</label>
