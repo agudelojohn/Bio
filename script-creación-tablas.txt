@@ -94,4 +94,4 @@ create table codes(
 );
 	
 	
-insert into acceso values('johnagudelo','g4m3s0fthr0n3s4124');
+insert into acceso values('johnagudelo', 'g4m3s0fthr0n3s4124');

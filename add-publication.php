@@ -43,10 +43,10 @@ function dateGenerate() {
 }
 
 function addSelect(divname) {
-   var arraynames =<?php echo json_encode($_NOMBRES); ?>;
+   var arraynames = <?php echo json_encode($_NOMBRES); ?>;
    var arrayids=<?php echo json_encode($_IDS); ?>;
    var newDiv=document.createElement('div');
-   var html = '<select style="margin-bottom:10px;" name="author-''">', dates = dateGenerate(), i;
+   var html = '<select>', dates = dateGenerate(), i;
    for(i = 0; i < arraynames.length; i++) {
        html += "<option value='"+arrayids[i]+"'>"+arraynames[i]+"</option>";
    }
@@ -93,7 +93,7 @@ if(isset($_SESSION['acceso']))
             <div name=author>
                 <div id="select-container">
                 </div>
-                <button type=button class="btn btn-success" id="add" onclick="addSelect('select-container');">Add Author</button>
+                <button type=button class="btn btn-success" id="add" onclick="addSelect('select-container');" style="margin-top:10px;">Add Author</button>
             </div>
             <small id="titleNew" class="form-text text-muted">Author of this publication</small>
         </div>
