@@ -46,13 +46,14 @@ function addSelect(divname) {
    var arraynames = <?php echo json_encode($_NOMBRES); ?>;
    var arrayids=<?php echo json_encode($_IDS); ?>;
    var newDiv=document.createElement('div');
-   var html = '<select>', dates = dateGenerate(), i;
+   var html = '<select style="margin-top:10px;">', dates = dateGenerate(), i;
    for(i = 0; i < arraynames.length; i++) {
        html += "<option value='"+arrayids[i]+"'>"+arraynames[i]+"</option>";
    }
    html += '</select>';
    newDiv.innerHTML= html;
    document.getElementById(divname).appendChild(newDiv);
+   document.getElementById("authors_counter").value = Number(document.getElementById("authors_counter").value) + 1;
 }
 </script>
 <!-- hasta aquí lo delos autores -->
@@ -91,6 +92,7 @@ if(isset($_SESSION['acceso']))
             <label for="author">Author</label><br>
             <!-- select para incluir un autor en las publicaciones, se genera apartir de la busqueda en la BD -->
             <div name=author>
+                <input type="text" id="authors_counter" disabled value=0>
                 <div id="select-container">
                 </div>
                 <button type=button class="btn btn-success" id="add" onclick="addSelect('select-container');" style="margin-top:10px;">Add Author</button>
