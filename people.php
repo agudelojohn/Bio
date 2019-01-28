@@ -139,22 +139,22 @@ echo '
                     <div class="row name_profile">
                         <!-- Nombre -->
                         <strong><h3>'.$array['name'].'</h3></strong>
-                    </div>
-                    <div class="row p-c-d">
-                        <!-- profesion, cargo, departamento o estudios-->
-                        ';
-// Ms(c) Systems Engineering <br>B.Sc, Systems Engineering<br>Tech. Web Development
-// hasta aquí el primer echo para poder colocar un for que muestre la lista de educación
-for($i=0;$i<count($pieces);$i++)
-{
-    echo $pieces[$i].'<br>';
-}
+                    </div>';
+//                     <div class="row p-c-d">
+//                         <!-- profesion, cargo, departamento o estudios-->
+//                         ';
+// // Ms(c) Systems Engineering <br>B.Sc, Systems Engineering<br>Tech. Web Development
+// // hasta aquí el primer echo para poder colocar un for que muestre la lista de educación
+// for($i=0;$i<count($pieces);$i++)
+// {
+//     echo $pieces[$i].'<br>';
+// }
 
 
-echo'
-                    <br>
-                    </div>
-                    <div class="row d-info">
+// echo'
+//                     <br>
+                    // </div>
+echo'                   <div class="row d-info">
                         <!-- demás informacion -->
                         <div class="col col-lg-auto text-left" style="padding-left:0;">
                             <ul style=" list-style-type: none;" id="titles">
