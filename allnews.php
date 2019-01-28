@@ -105,12 +105,13 @@ echo '
               <div class="modal-body">
                 <div class="row justify-content-center">
                     <div class="col col-lg-12">
-                        <img class="img-profile " src="'.$img.'" alt="">
-                    </div>
-                    <div class="col col-lg-12">
                         <h5>'.$date.'</h5>
                         <p>'.$content.'</p>            
                     </div>
+                    <div class="col col-lg-12">
+                        <img class="img-profile " src="'.$img.'" alt="">
+                    </div>
+                    
                 </div>
                 
                 </div>

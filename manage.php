@@ -17,7 +17,21 @@ session_start();
     <link rel="stylesheet" type="text/css" href="navBar/navBar.css">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
- 
+ <script>
+ function new_label(){
+// sección que saca el nombre del pdf solamente
+    var fullPath = document.getElementById('img_new').value;
+    if (fullPath) {
+        var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+        var filename = fullPath.substring(startIndex);
+        if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                filename = filename.substring(1);
+            }
+        }
+    //replace the "Choose a file" label
+    document.getElementById('new_label').innerHTML = filename;
+}
+ </script>
 </head>
 <body>
 <?php
@@ -45,12 +59,17 @@ if(isset($_SESSION['acceso']))
             </div>
 </div>
 <div class=container>
-    <form method="post" action="php/metodos/agregar_noticia.php">
+    <form method="post" action="php/metodos/agregar_noticia.php" enctype="multipart/form-data">
     <div class="form-group">
         <label for="title">Title</label>
-        <input type="text" class="form-control" name=title id="title" aria-describedby="titleNew" placeholder="Enter title" maxlength=100>
+        <input type="text" class="form-control" name=title id="title" aria-describedby="titleNew" placeholder="Enter title" maxlength=99>
         <small id="titleNew" class="form-text text-muted">Main title of each new</small>
     </div>
+    <label >Image</label>
+        <div class="custom-file" style="margin-bottom:30px;">        
+            <input type="file" class="custom-file-input" id="img_new" name="img_new" onchange="new_label()">
+            <label class="custom-file-label" for="img_new" id="new_label">Choose image profile</label>
+        </div>
     <div class="form-group">
         <label for="date">Date</label>
         <input type="date" class="form-control" name=date id="date" aria-describedby="dateNew" placeholder="Event date"> 
