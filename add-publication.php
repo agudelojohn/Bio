@@ -43,10 +43,11 @@ function dateGenerate() {
 }
 
 function addSelect(divname) {
+   var contador=document.getElementById("authors_counter").value;
    var arraynames = <?php echo json_encode($_NOMBRES); ?>;
    var arrayids=<?php echo json_encode($_IDS); ?>;
    var newDiv=document.createElement('div');
-   var html = '<select style="margin-top:10px;">', dates = dateGenerate(), i;
+   var html = '<select style="margin-top:10px;" name="author-'+contador+'">', dates = dateGenerate(), i;
    for(i = 0; i < arraynames.length; i++) {
        html += "<option value='"+arrayids[i]+"'>"+arraynames[i]+"</option>";
    }
@@ -55,6 +56,36 @@ function addSelect(divname) {
    document.getElementById(divname).appendChild(newDiv);
    document.getElementById("authors_counter").value = Number(document.getElementById("authors_counter").value) + 1;
 }
+
+// para que muestre el nombre en los inputs
+
+function pdf_label(){
+// sección que saca el nombre del pdf solamente
+    var fullPath = document.getElementById('pdf_pub').value;
+    if (fullPath) {
+        var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+        var filename = fullPath.substring(startIndex);
+        if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                filename = filename.substring(1);
+            }
+        }
+    //replace the "Choose a file" label
+    document.getElementById('pdf_label').innerHTML = filename;
+}
+function img_label(){
+// sección que saca el nombre del pdf solamente
+    var fullPath = document.getElementById('img_profile').value;
+    if (fullPath) {
+        var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+        var filename = fullPath.substring(startIndex);
+        if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                filename = filename.substring(1);
+            }
+        }
+    //replace the "Choose a file" label
+    document.getElementById('img_label').innerHTML = filename;
+}
+
 </script>
 <!-- hasta aquí lo delos autores -->
 <?php
@@ -83,6 +114,7 @@ if(isset($_SESSION['acceso']))
 </div>
 <div class=container>
     <form method="post" action="php/metodos/agregar_publicacion.php" enctype="multipart/form-data">
+    
         <div class="form-group">
             <label for="title">Title</label>
             <input type="text" class="form-control" name=title id="tile" aria-describedby="titleNew" placeholder="Enter title" maxlength=100>
@@ -92,7 +124,7 @@ if(isset($_SESSION['acceso']))
             <label for="author">Author</label><br>
             <!-- select para incluir un autor en las publicaciones, se genera apartir de la busqueda en la BD -->
             <div name=author>
-                <input type="text" id="authors_counter" disabled value=0>
+                <input type="text" id="authors_counter" name="authors_counter" value=0 style="display:none;">
                 <div id="select-container">
                 </div>
                 <button type=button class="btn btn-success" id="add" onclick="addSelect('select-container');" style="margin-top:10px;">Add Author</button>
@@ -101,13 +133,13 @@ if(isset($_SESSION['acceso']))
         </div>
         <label >PDF</label>
         <div class="custom-file" style="margin-bottom:30px;">        
-            <input type="file" class="custom-file-input" id="pdf_pub" name="pdf_pub">
-            <label class="custom-file-label" for="pdf_pub">Choose PDF for download</label>
+            <input type="file" class="custom-file-input" id="pdf_pub" name="pdf_pub" onchange="pdf_label()">
+            <label class="custom-file-label" for="pdf_pub" id="pdf_label">Choose PDF for download</label>
         </div>
         <label >Image</label>
         <div class="custom-file" style="margin-bottom:30px;">        
-            <input type="file" class="custom-file-input" id="img_profile" name="img_pub">
-            <label class="custom-file-label" for="img_pub">Choose image to show</label>
+            <input type="file" class="custom-file-input" id="img_profile" name="img_pub" onchange="img_label()">
+            <label class="custom-file-label" for="img_profile" id="img_label">Choose image to show</label>
         </div>
         <div class="form-group">
             <label for="abstract">Abstract</label>
