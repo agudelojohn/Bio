@@ -53,22 +53,7 @@ if(isset($_SESSION['acceso']))
             </div>
 </div>
 <div class=container>
-    <!-- <form method="post" action="php/metodos/agregar_code.php" enctype="multipart/form-data" onsubmit="return validar_code();">
-        <div class="form-group">
-            <label for="title">Title or Name</label>
-            <input type="text" class="form-control" name=name_code id="name_code" aria-describedby="titleNew" placeholder="Enter title" maxlength=100 required>
-            <small id="titleNew" class="form-text text-muted">Main title of each code</small>
-        </div>
-        <div class="form-group">
-            <label for="title">URL</label>
-            <input type="text" class="form-control" name=url_code id="url_code" aria-describedby="titleNew" placeholder="Enter url" maxlength=100 required>
-            <small id="titleNew" class="form-text text-muted">Link to code</small>
-        </div>
-        
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-        <button type="reset" class="btn btn-primary" value="Reset" style="margin-left:20px;">Reset</button>
-    </form> -->
     <form method="post" action="php/metodos/agregar_code.php" enctype="multipart/form-data" onsubmit="return validar_code();">
         <div class="form-group">
             <label for="title">Title or Name</label>

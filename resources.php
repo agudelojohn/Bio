@@ -79,7 +79,7 @@ while($array=mysqli_fetch_array($resultado)){
                 <p>'.$array['nombre_dataset'].'</p>
             </div>
             <div class="col-6">
-                <a href="'.$array['location_dataset'].'" download><img id=imagen onmouseover="over(this)" onmouseout="leave(this)" src="imgs/Interna/icon.png" height="42" width="42"></a>
+                <a href="'.$array['location_dataset'].'" download><img id=imagen onmouseover="over(this)" onmouseout="leave(this)" src="imgs/Internas/icon.png" height="42" width="42"></a>
             </div>
         </div>
     </div>';
