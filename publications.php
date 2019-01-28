@@ -51,10 +51,13 @@ while($array=mysqli_fetch_array($resultado)){
 echo    '<li style="margin-top:30px;">
         <div class="card border-left-0" >
             <div class="card-body row pre-publications" >
-                <div class="col col-lg-10">
+                <div class="col col-lg-8">
                     <h5 class="card-title">'.$array['title'].' </h5>
                     <h6 class="card-subtitle mb-2 text-muted">Esto hay que cambiarlo, son los autores</h6>
                     <p class="card-text">aquí la el lugar donde lo presentaron o algo así</p>
+                </div>
+                <div class="col col-lg-2">
+                    <img src="'.$array['img_publication'].'" style="width:100%">
                 </div>
                 <div class="col col-lg-2">
                     <h5>'.substr($array['date_publication'], 0, 4).'</h5>
