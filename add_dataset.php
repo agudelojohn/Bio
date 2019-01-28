@@ -17,7 +17,21 @@ session_start();
     <link rel="stylesheet" type="text/css" href="navBar/navBar.css">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
+<script>
+function dataset_label(){
+// sección que saca el nombre del pdf solamente
+    var fullPath = document.getElementById('dataset').value;
+    if (fullPath) {
+        var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+        var filename = fullPath.substring(startIndex);
+        if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                filename = filename.substring(1);
+            }
+        }
+    //replace the "Choose a file" label
+    document.getElementById('dataset_label').innerHTML = filename;
+}
+</script>
 </head>
 <body>
 <?php
@@ -61,8 +75,8 @@ if(isset($_SESSION['acceso']))
         </div>
         <label >Dataset</label>
         <div class="custom-file" style="margin-bottom:30px;">        
-            <input type="file" class="custom-file-input" id="dataset" name="dataset">
-            <label class="custom-file-label" for="pdf_pub">Select Dataset to upload</label>
+            <input type="file" class="custom-file-input" id="dataset" name="dataset" onchange="dataset_label()">
+            <label class="custom-file-label" for="dataset" id="dataset_label">Select Dataset to upload</label>
         </div>
         
 

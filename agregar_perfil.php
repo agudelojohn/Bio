@@ -17,10 +17,30 @@ session_start();
     <link rel="stylesheet" type="text/css" href="navBar/navBar.css">
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
- 
+ <script>
+function img_label(){
+// sección que saca el nombre del pdf solamente
+    var fullPath = document.getElementById('img_profile').value;
+    if (fullPath) {
+        var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+        var filename = fullPath.substring(startIndex);
+        if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                filename = filename.substring(1);
+            }
+        }
+    //replace the "Choose a file" label
+    document.getElementById('img_label').innerHTML = filename;
+}
+ </script>
 </head>
 <body>
 <?php
+if (isset($_GET["correcto"])=='si')
+{
+    echo'<script type="text/javascript">
+    alert("Saved correctly");
+    </script>';
+}
 // Esto muestra una navbar dependiendo del acceso que se tenga
 if(isset($_SESSION['acceso']))
 {
@@ -58,18 +78,18 @@ if(isset($_SESSION['acceso']))
         </div>
         <label >Image</label>
         <div class="custom-file" style="margin-bottom:30px;">        
-            <input type="file" class="custom-file-input" id="img_profile" name="img_profile">
-            <label class="custom-file-label" for="img_profile">Choose image profile</label>
+            <input type="file" class="custom-file-input" id="img_profile" name="img_profile" onchange="img_label()">
+            <label class="custom-file-label" for="img_profile" id="img_label">Choose image profile</label>
         </div>
         <div class="form-group">
             <label for="education">Education</label>
-            <input type="text" class="form-control" id="education" name=education aria-describedby="educationProfile" placeholder="Enter education info"  maxlength=200>
-            <small id="educationProfile" class="form-text text-muted">Please separe each new line with semicolon (;)</small>
+            <input type="text" class="form-control" id="education" name=education aria-describedby="educationProfile" placeholder="Enter education info"  maxlength=200 onclick="alert('Remember to separate each new item with semicolon (;)')">
+            <small id="educationProfile" class="form-text text-muted">Please separe each new item with semicolon (;)</small>
         </div>
         <div class="form-group">
             <label for="emails">Contact</label>
-            <input type="text" class="form-control" id="emails" name=emails aria-describedby="contactProfile" placeholder="Enter contact info"  maxlength=200>
-            <small id="contactProfile" class="form-text text-muted">Please separe each new line with semicolon (;)</small>
+            <input type="text" class="form-control" id="emails" name=emails aria-describedby="contactProfile" placeholder="Enter contact info"  maxlength=200 onclick="alert('Remember to separate each new item with semicolon (;)')">
+            <small id="contactProfile" class="form-text text-muted">Please separate each new item with semicolon (;)</small>
         </div>
         <div class="form-group">
             <label for="resume">Resume</label>
