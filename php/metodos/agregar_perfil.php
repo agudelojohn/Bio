@@ -24,14 +24,15 @@ $emails=$_POST['emails'];
 $resume=$_POST['resume'];
 
 // para guardar el lugar real de la imagen y su nombre para la BD se guarda la dirección
-$sql="insert into people_profiles(name, education, contact, img_profile, resum)
-    values('".$name."','".$education."','".$emails."','".$dir."','".$resume."')";
-    $ejecutar=mysqli_query($conexion,$sql);
-    if($ejecutar!=0){
-    header("Location:".$_SERVER['HTTP_REFERER']."?correcto=si");
-    }else
-    {
-        header("Location:".$_SERVER['HTTP_REFERER']."?errorCarga");;
-    }
+$sql='insert into people_profiles(name, education, contact, img_profile, resum)
+    values("'.$name.'","'.$education.'","'.$emails.'","'.$dir.'","'.$resume.'")';
+echo $sql;
+    // $ejecutar=mysqli_query($conexion,$sql);
+    // if($ejecutar!=0){
+    // header("Location:".$_SERVER['HTTP_REFERER']."?correcto=si");
+    // }else
+    // {
+    //     header("Location:".$_SERVER['HTTP_REFERER']."?errorCarga");;
+    // }
 
 ?>
