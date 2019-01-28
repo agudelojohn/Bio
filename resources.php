@@ -19,11 +19,11 @@ session_start();
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <script>
     function over(x){
-        x.src="datasets/icon2.png";
+        x.src="imgs/Internas/icon2.png";
     }
 
     function leave(x){
-        x.src="datasets/icon.png";
+        x.src="imgs/Internas/icon.png";
     }
     function bigImg(x) {
     x.style.height = "64px";
@@ -79,7 +79,7 @@ while($array=mysqli_fetch_array($resultado)){
                 <p>'.$array['nombre_dataset'].'</p>
             </div>
             <div class="col-6">
-                <a href="'.$array['location_dataset'].'" download><img id=imagen onmouseover="over(this)" onmouseout="leave(this)" src="datasets/icon.png" height="42" width="42"></a>
+                <a href="'.$array['location_dataset'].'" download><img id=imagen onmouseover="over(this)" onmouseout="leave(this)" src="imgs/Interna/icon.png" height="42" width="42"></a>
             </div>
         </div>
     </div>';
@@ -110,7 +110,7 @@ while($array=mysqli_fetch_array($resultado)){
                 <p>'.$array['nombre_code'].'</p>
             </div>
             <div class="col-6">
-                <a href="'.$array['url_code'].'" target="_blank"><img id=imagen onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="datasets/external.png" style="height:42px; width:42px;"></a>
+                <a href="'.$array['url_code'].'" target="_blank"><img id=imagen onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="imgs/Internas/external.png" style="height:42px; width:42px;"></a>
             </div>
         </div>
     </div>';
