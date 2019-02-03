@@ -250,7 +250,7 @@ echo '
                 <div class="col col-lg-10">
                     <h3>Publications</h3>
                     <ul>';
-$sql_dos="SELECT title, abstract FROM people_profiles JOIN author JOIN publications on people_profiles.id_profile=author.id_people and author.id_publication=publications.id_publication where people_profiles.id_profile='$array[id_profile]'";
+$sql_dos="SELECT title, abstract FROM people_profiles JOIN author JOIN publications on people_profiles.id_profile=author.id_people and author.id_publication=publications.id_publication where people_profiles.id_profile=$array[id_profile]";
 // query para mandar la sentencia
 $resultado2 = mysqli_query($conexion,$sql_dos);
 // toma los datos en un array
@@ -288,17 +288,17 @@ echo '
                     </div>
                     <div class="col col-lg-8">
                         <form method="post" action="php/metodos/modificar_perfil.php" enctype="multipart/form-data">
-                            <input type=text value="'.$array['id_profile'].'" disabled><br>
+                            <input type=text name=id_profile value="'.$array['id_profile'].'" style="display:none;"><br>
                             Name:<br>
-                            <input type=text value="'.$array['name'].'"><br>
+                            <input type=text name=name_profile value="'.$array['name'].'" maxlength=50><br>
                             Profile'.$comilla.'s image:<br>
-                            <input type=text value="'.$array['img_profile'].'"><br>
+                            <input type=text name=img_profile value="'.$array['img_profile'].'" maxlength=100><br>
                             Education:<br>
-                            <input type=text value="'.$array['education'].'"><br>
+                            <input type=text name=education_profile value="'.$array['education'].'" maxlength=200><br>
                             Contact:<br>
-                            <input type=text value="'.$array['contact'].'"><br>
+                            <input type=text name=contact_profile value="'.$array['contact'].'" maxlength=200><br>
                             Resum:<br>
-                            <textarea>'.$array['resum'].'</textarea><br>
+                            <textarea name=resum_profile maxlength=600>'.$array['resum'].'</textarea><br>
                             Publications:<br>
                             <textarea disabled>';
                             $sql_dos="SELECT title FROM people_profiles JOIN author JOIN publications on people_profiles.id_profile=author.id_people and author.id_publication=publications.id_publication where people_profiles.id_profile='$array[id_profile]'";

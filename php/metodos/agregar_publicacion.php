@@ -42,12 +42,13 @@ $ejecutar=mysqli_query($conexion,$sql);
 
 
 $sql2="select id_publication from publications where title='".$title."';";
+
 $resultado = mysqli_query($conexion, $sql2);
 $id_pub = $resultado->fetch_assoc(); //resultado de buscar la ID de la publicación
 $contador = $_POST['authors_counter'];
 for($i=0;$i<$contador;$i++)
 {
-    $sql="insert into author(id_publication, id_people) values(".$id_pub.",".$_POST['author-'.$i].");";
+    $sql="insert into author(id_publication, id_people) values(".$id_pub['id_publication'].",".$_POST['author-'.$i].");";
     $resultado = mysqli_query($conexion, $sql);
     if($resultado==0){
         header("Location:".$_SERVER['HTTP_REFERER']."?errorAlGuardarAutores");
