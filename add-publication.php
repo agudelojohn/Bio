@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inicio de la app</title>
+    <title>Adding publications</title>
 
     <script src="Bjs/jquery.js"></script>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
@@ -147,7 +147,7 @@ if(isset($_SESSION['acceso']))
         </div>
         <div class="form-group">
             <label for="code">Code</label>
-            <input type="text" class="form-control" name=code id="code" aria-describedby="titleNew" placeholder="Enter title" maxlength=100>
+            <input type="text" class="form-control" name=code id="code" aria-describedby="titleNew" placeholder="Enter title" maxlength=100 value="resources.php">
             <small id="titleNew" class="form-text text-muted">Link to download this code</small>
         </div>
         <div class="form-group">

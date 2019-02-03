@@ -7,7 +7,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Inicio de la app</title>
+    <title>Publications</title>
   
     <script src="Bjs/jquery.js"></script>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
@@ -48,19 +48,29 @@ $resultado = mysqli_query($conexion,$sql);
 while($array=mysqli_fetch_array($resultado)){
     // primero saco la fecha como la necesitamos
     
-echo    '<li style="margin-top:30px;">
-        <div class="card border-left-0" >
+echo    '
+        <div class="card border-left-0" style="margin-top:20px;">
             <div class="card-body row pre-publications" >
                 <div class="col col-lg-8">
-                    <h5 class="card-title">'.$array['title'].' </h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Esto hay que cambiarlo, son los autores</h6>
-                    <p class="card-text">aquí la el lugar donde lo presentaron o algo así</p>
+                    <h5 class="card-title" style="margin-top:10px;">'.$array['title'].' </h5>
+                    <ul style="margin-top:-15px;">';
+$sql2='SELECT name from author join publications JOIN people_profiles where people_profiles.id_profile=author.id_people and publications.id_publication=author.id_publication';
+$resultado2 = mysqli_query($conexion,$sql2);
+while($array2=mysqli_fetch_array($resultado2)){
+    echo '<li>'.$array2['name'].'</li>';
+}
+
+                    
+echo'
+                    </ul>
+                    <p class="card-text">'.$array['abstract'].'</p>
                 </div>
                 <div class="col col-lg-2">
-                    <img src="'.$array['img_publication'].'" style="width:100%">
+                    <br><img src="'.$array['img_publication'].'" style="width:100%">
                 </div>
                 <div class="col col-lg-2">
-                    <h5>'.substr($array['date_publication'], 0, 4).'</h5>
+                    <!--<h5>'.substr($array['date_publication'], 0, 4).'</h5>-->
+                    <br><h5>'.$array['date_publication'].'</h5>
                 </div>
                 <div class="col col-lg-12">
                 <br>
@@ -75,7 +85,7 @@ echo    '<li style="margin-top:30px;">
 }
 ?>
         
-    </ul>
+
 </div>
 
 
