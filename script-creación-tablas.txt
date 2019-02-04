@@ -84,7 +84,9 @@ create table acceso(
 create table datasets(
 	id_dataset int PRIMARY KEY AUTO_INCREMENT,
 	nombre_dataset varchar(100) not null,
-	location_dataset varchar(100) not null
+	location_dataset varchar(100) not null,
+    description_dataset varchar(500),
+    image_dataset varchar(50)
 );
 
 create table codes(
