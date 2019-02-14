@@ -19,8 +19,8 @@ session_start();
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <script>
 function dataset_label(){
-// sección que saca el nombre del pdf solamente
-    var fullPath = document.getElementById('dataset').value;
+// sección que saca el nombre 
+    var fullPath = document.getElementById('name_dataset').value;
     if (fullPath) {
         var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
         var filename = fullPath.substring(startIndex);
@@ -30,6 +30,19 @@ function dataset_label(){
         }
     //replace the "Choose a file" label
     document.getElementById('dataset_label').innerHTML = filename;
+}
+function img_label(){
+// sección que saca el nombre del pdf solamente
+    var fullPath = document.getElementById('img_dataset').value;
+    if (fullPath) {
+        var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+        var filename = fullPath.substring(startIndex);
+        if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                filename = filename.substring(1);
+            }
+        }
+    //replace the "Choose a file" label
+    document.getElementById('img_label').innerHTML = filename;
 }
 </script>
 </head>
@@ -75,11 +88,18 @@ if(isset($_SESSION['acceso']))
         </div>
         <label >Dataset</label>
         <div class="custom-file" style="margin-bottom:30px;">        
-            <input type="file" class="custom-file-input" id="dataset" name="dataset" onchange="dataset_label()">
+            <input type="file" class="custom-file-input" id="name_dataset" name="name_dataset" onchange="dataset_label()" maxlegth=100>
             <label class="custom-file-label" for="dataset" id="dataset_label">Select Dataset to upload</label>
         </div>
-        
-
+        <label >Image</label>
+        <div class="custom-file" style="margin-bottom:30px;">        
+            <input type="file" class="custom-file-input" id="img_dataset" name="img_dataset" onchange="img_label()" maxlegth=50>
+            <label class="custom-file-label" for="img_dataset" id="img_label">Choose image to show</label>
+        </div>
+        <div class="form-group">
+            <label for="resume">Description</label>
+            <textarea class="form-control" id="description_dataset" name="description_dataset" rows="3" placeholder="Please enter details about dataset"  maxlength=500></textarea>
+        </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         <button type="reset" class="btn btn-primary" value="Reset" style="margin-left:20px;">Reset</button>
     </form>

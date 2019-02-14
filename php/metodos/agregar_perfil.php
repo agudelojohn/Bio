@@ -12,7 +12,7 @@ $dir="../../imgs/profiles/";
 $nombre_archivo=$_FILES['img_profile']['name'];
 
 if(!move_uploaded_file($_FILES['img_profile']['tmp_name'],$dir.$nombre_archivo)){ //pregunta si NO se movió el archivo
-    echo "Error al subir el archivo<br>";
+    echo "Error al subir la imagen<br>";
     echo "<a href='../../agregar_perfil.php'>Volver</a>";
     exit;
 }
